@@ -96,3 +96,8 @@ var {
   font-style: normal;
   font-weight: normal;
 }
+
+* {
+  font-family: "-apple-system", "BlinkMacSystemFont", "Malgun Gothic",
+    "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
+}

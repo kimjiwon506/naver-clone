@@ -10,35 +10,243 @@
   </head>
   <body>
     <div class="top_banner">
-        <div class="contents">
+        <div class="top_banner_inner">
             <a href="" class="click_banner"></a>
-            <span>매일쓰는 브라우저 보안이 걱정된다면, <strong>안전하고 빠른 최신 브라우저 웨일로 업데이트 하세요.</strong></span>
-            <a class="download" href="/">
+            <span>매일 쓰는 브라우저 보안이 걱정된다면, <strong class="strong">안전하고 빠른 최신 브라우저 웨일로 업데이트 하세요.</strong></span>
+            <a class="download_button" href="/">
                 <span>다운로드</span>
             </a>
             <button class="close_button">3일 동안 보지 않기</button>
         </div>
     </div>
 
-    <header>
+    <header role="header">
         <div class="header_top">
             <div class="header_top_inner">
                 <div class="logo_area">
                     <h1><a href=""><span class="blind">네이버</span></a></h1>
                 </div>
+
+                <div class="service_area">
+                  <a href="/" class="set_home_button">네이버를 시작페이지로</a>
+                  <i class="divider"></i>
+                  <a href="/" class="junior_naver_button">
+                      <i></i>
+                      <span class="blind">쥬니어네이버</span>
+                  </a>
+                  <a href="" class="happy_bean_button">
+                      <i></i>
+                      <span class="blind">해피빈</span>
+                  </a>
+                </div>
+
+                <div class="search_area">
+                  <form action="" id="search_form">
+                      <fieldset>
+                          <legend class="blind">검색</legend>
+                          <div class="window_box">
+                              <input type="text" title="검색어 입력">
+                          </div>
+                      </fieldset>
+                      
+                      <button class="search_button">
+                          <span class="blind">검색</span>
+                          <span class="search_icon"></span>
+                      </button>
+
+                      <a class="keyboard_button">
+                        <span class="blind">한글 입력기</span>
+                        <span class="keyboard_icon"></span>
+                      </a>
+
+                      <a href="/" class="auto_complete_button" role="button">
+                        <span class="blind">자동완성 레이어</span>
+                        <span class="arrow_icon"></span>
+                      </a>
+                  </form>
+                </div>
             </div>
-            <div class="service_area"></div>
-            <div class="search_area"></div>
         </div>
-        <div class="gnb"></div>
+
+        <div class="gnb" role="navigation">
+          <div class="gnb_inner">
+            <div class="nav_group">
+              <ul class="personal_nav_list">
+                <li class="list_item">
+                  <a href="/">
+                    <i class="mail_icon"></i>메일
+                  </a>
+                </li>
+                <li class="list_item">
+                  <a href="/">카페</a>
+                </li>
+                <li class="list_item">
+                  <a href="/">블로그</a>
+                </li>
+                <li class="list_item">
+                  <a href="/">지식iN</a>
+                </li>
+                <li class="list_item">
+                  <a href="/" class="shopping_item">
+                    <span class="blind">
+                    쇼핑
+                    </span>
+                  </a>
+                </li>
+                <li class="list_item">
+                  <a href="/" class="shopping_live_item">
+                    <span class="blind">쇼핑라이브</span>
+                  </a>
+                </li>
+                <li class="list_item">
+                  <a href="/">Pay</a>
+                </li>
+                <li class="list_item">
+                  <a href="/">
+                    <i class="tv_icon"></i>TV
+                  </a>
+                </li>
+              </ul>
+
+              <ul class="favorit_nav_list">
+                <li class="list_item">
+                  <a href="">사전</a>
+                </li>
+                <li class="list_item">
+                  <a href="">뉴스</a>
+                </li>
+                <li class="list_item">
+                  <a href="">증권</a>
+                </li>
+                <li class="list_item">
+                  <a href="">부동산</a>
+                </li>
+                <li class="list_item">
+                  <a href="">지도</a>
+                </li>
+                <li class="list_item">
+                  <a href="">VIBE</a>
+                </li>
+                <li class="list_item">
+                  <a href="">도서</a>
+                </li>
+                <li class="list_item">
+                  <a href="">웹툰</a>
+                </li>
+              </ul>
+
+              <a href="" class="more_button">더보기</a>
+            </div>
+
+            <div class="weather_group">
+              <div class="air_conditanal_box">
+                <a href="">
+                  <ul>
+                    <li class="item">
+                      <span class="item_title">미세</span>
+                      <i class="item_icon low"></i>
+                      <span class="item_condition">좋음</span>
+                    </li>
+                    <i class="divider"></i>
+                    <li class="item">
+                      <span class="item_title">초미세</span>
+                      <i class="item_icon strong"></i>
+                      <span class="item_condition">좋음</span>
+                    </li>
+                  </ul>
+                  <span class="location">구로동</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
     </header>
 
-    <container>
-        <div class="column_left"></div>
-        <div class="column_right"></div>
-    </container>
+    <main class="container" role="main">
+        <div class="column_left">
+          <div class="banner_top">
+            <a href="">
+              <img src="./assets/img/container/top-banner-image.jpg" alt="">
+            </a>
+          </div>
 
-    <footer>
+          <div class="news_stand_box">
+            <h2 class="blind">뉴스 스탠드</h2>
+
+            <div class="news_stand_header">
+              <div class="issue_area">
+                <a href="/" class="issue_title">연합뉴스</a>
+                <div class="rolling_box">
+                  <a class="text ellipsis">[속보] 이태원 특위, 국조 계획서 채택…대검은 마약전담부서만 마약전담부서만</a>
+                </div>
+              </div>
+              
+              <div class="direct_area">
+                <a href="" class="today_image">
+                  <span class="blind">QATAR 2022</span>
+                </a>
+                <a href="/" class="news_home">뉴스홈</a>
+                <a href="/" class="nomarl_button">연예</a>
+                <a href="/" class="nomarl_button">스포츠</a>
+                <a href="/" class="nomarl_button">경제</a>
+              </div>
+            </div>
+
+            <div class="news_stand_title">
+              <a href="" class="title_button">뉴스스탠드</a>
+
+              <div class="press_box">
+                <a href="">구독한 언론사</a>
+                <a href="" class="total_press bold">전체언론사</a>
+              </div>
+
+              <div class="set_icon_box">
+                <a href="/">
+                  <span class="blind">리스트형</span>
+                  <i class="set_icon_list"></i>
+                </a>
+                <a href="/">
+                  <span class="blind">섬네일형</span>
+                  <i class="set_icon_tumb"></i>
+                </a>
+                <a href="/">
+                  <span class="blind">설정</span>
+                  <i class="set_icon_setting"></i>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="news_stand_container">
+            <ul class="group_box">
+              <li class="item">
+                <a href="/" class="news1">
+                  <img src="./assets/img/container/news-stand-container/1.png" alt="언론사1">
+                </a>
+                <div class=item_wrap>
+                  <a href="/" class="button_news btn-subscription">구독</a>
+                  <a href="/" class="button_news btn-subscription">기사보기</a>
+                </div>
+              </li>
+              <li class="item">
+                <a href="/" class="news1">
+                  <img src="./assets/img/container/news-stand-container/1.png" alt="언론사1">
+                </a>
+                <div class=item_wrap>
+                  <a href="/" class="button_news btn-subscription">구독</a>
+                  <a href="/" class="button_news btn-subscription">기사보기</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- column_right -->
+        <div class="column_right"></div>
+    </main>
+
+    <footer role="footer">
         <div class="footer_inner">
             <div class="banner_area"></div>
             <div class="notice_area"></div>

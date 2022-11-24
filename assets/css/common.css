@@ -7,3 +7,26 @@
   margin: -1px;
   overflow: hidden;
 }
+
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.background_border {
+  background-color: #f7f9fa;
+  border: 1px solid #dae1e6;
+}
+
+.border {
+  border: 1px solid #e4e8eb;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.strong {
+  font-weight: 700;
+}
