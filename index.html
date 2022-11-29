@@ -3,7 +3,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Naver-clone</title>
+    <!-- style -->
     <link rel="stylesheet" href="./assets/css/reset.css" type="text/css">
     <link rel="stylesheet" href="./assets/css/style.css" type="text/css">
     <link rel="stylesheet" href="./assets/css/common.css" type="text/css">
@@ -11,7 +13,6 @@
   <body>
     <div class="top_banner">
         <div class="top_banner_inner">
-            <a href="" class="click_banner"></a>
             <span>매일 쓰는 브라우저 보안이 걱정된다면, <strong class="strong">안전하고 빠른 최신 브라우저 웨일로 업데이트 하세요.</strong></span>
             <a class="download_button" href="/">
                 <span>다운로드</span>
@@ -162,7 +163,7 @@
         </div>
     </header>
 
-    <main class="container" role="main">
+    <div class="container" role="main">
         <div class="column_left">
           <!-- 광고배너 -->
           <div class="banner_top">
@@ -520,6 +521,7 @@
                       <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
                       <div class="source">
                         <span>D조 (2022 카타르 월드컵)</span>
+                        <span class="date">1시간 전</span>
                       </div>
                     </div>
                   </a>
@@ -559,296 +561,304 @@
               </div>
 
               <div class="media_view_wrap">
-                <div class="media_view_list_inner">
-                  <div class="card_item">
-                    <a href="/">
-                      <div class="thumb_area">
-                        <img src="./assets/img/container/thema-cast-sports-part/top_issue_3.jpeg" width="232" height="130" alt="탑 이슈 이미지1">
-                        <i class="play_icon"><span class="blind">재생</span></i>
-                        <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
-                      </div>
-                      <div class="desc_area">
-                        <em>골영상</em>
-                        <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
-                        <div class="source">
-                          <span>D조 (2022 카타르 월드컵)</span>
+                <!-- 첫번째 -->
+                <div class="media_view_list">
+                  <div class="media_view_list_inner">
+                    <div class="card_item">
+                      <a href="/">
+                        <div class="thumb_area">
+                          <img src="./assets/img/container/thema-cast-sports-part/top_issue_3.jpeg" width="232" height="130" alt="탑 이슈 이미지1">
+                          <i class="play_icon"><span class="blind">재생</span></i>
+                          <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
                         </div>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="card_item">
-                    <a href="/">
-                      <div class="thumb_area">
-                        <img src="./assets/img/container/thema-cast-sports-part/top_issue_4.jpeg" width="232" height="130" alt="탑 이슈 이미지1">
-                        <i class="play_icon"><span class="blind">재생</span></i>
-                        <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
-                      </div>
-                      <div class="desc_area">
-                        <em>골영상</em>
-                        <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
-                        <div class="source">
-                          <span>D조 (2022 카타르 월드컵)</span>
+                        <div class="desc_area">
+                          <em>골영상</em>
+                          <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
+                          <div class="source">
+                            <span>D조 (2022 카타르 월드컵)</span>
+                          </div>
                         </div>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="card_item">
-                    <a href="/">
-                      <div class="thumb_area">
-                        <img src="./assets/img/container/thema-cast-sports-part/top_issue_5.jpeg" width="232" height="130" alt="탑 이슈 이미지1">
-                        <i class="play_icon"><span class="blind">재생</span></i>
-                        <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
-                      </div>
-                      <div class="desc_area">
-                        <em>골영상</em>
-                        <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
-                        <div class="source">
-                          <span>D조 (2022 카타르 월드컵)</span>
+                      </a>
+                    </div>
+                    <div class="card_item">
+                      <a href="/">
+                        <div class="thumb_area">
+                          <img src="./assets/img/container/thema-cast-sports-part/top_issue_4.jpeg" width="232" height="130" alt="탑 이슈 이미지1">
+                          <i class="play_icon"><span class="blind">재생</span></i>
+                          <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
                         </div>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="card_item">
-                    <a href="/">
-                      <div class="thumb_area">
-                        <img src="./assets/img/container/thema-cast-sports-part/top_issue_1.jpeg" width="232" height="130" alt="탑 이슈 이미지1">
-                        <i class="play_icon"><span class="blind">재생</span></i>
-                        <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
-                      </div>
-                      <div class="desc_area">
-                        <em>골영상</em>
-                        <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
-                        <div class="source">
-                          <span>D조 (2022 카타르 월드컵)</span>
+                        <div class="desc_area">
+                          <em>골영상</em>
+                          <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
+                          <div class="source">
+                            <span>D조 (2022 카타르 월드컵)</span>
+                            <span class="date">1시간 전</span>
+                          </div>
                         </div>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="card_item">
-                    <a href="/">
-                      <div class="thumb_area">
-                        <img src="./assets/img/container/thema-cast-sports-part/top_issue_1.jpeg" width="232" height="130" alt="탑 이슈 이미지1">
-                        <i class="play_icon"><span class="blind">재생</span></i>
-                        <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
-                      </div>
-                      <div class="desc_area">
-                        <em>골영상</em>
-                        <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
-                        <div class="source">
-                          <span>D조 (2022 카타르 월드컵)</span>
+                      </a>
+                    </div>
+                    <div class="card_item">
+                      <a href="/">
+                        <div class="thumb_area">
+                          <img src="./assets/img/container/thema-cast-sports-part/top_issue_5.jpeg" width="232" height="130" alt="탑 이슈 이미지1">
+                          <i class="play_icon"><span class="blind">재생</span></i>
+                          <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
                         </div>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="card_item">
-                    <a href="/">
-                      <div class="thumb_area">
-                        <img src="./assets/img/container/thema-cast-sports-part/top_issue_1.jpeg" width="232" height="130" alt="탑 이슈 이미지1">
-                        <i class="play_icon"><span class="blind">재생</span></i>
-                        <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
-                      </div>
-                      <div class="desc_area">
-                        <em>골영상</em>
-                        <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
-                        <div class="source">
-                          <span>D조 (2022 카타르 월드컵)</span>
+                        <div class="desc_area">
+                          <em>골영상</em>
+                          <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
+                          <div class="source">
+                            <span>D조 (2022 카타르 월드컵)</span>
+                          </div>
                         </div>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="card_item">
-                    <a href="/">
-                      <div class="thumb_area">
-                        <img src="./assets/img/container/thema-cast-sports-part/top_issue_1.jpeg" width="232" height="130" alt="탑 이슈 이미지1">
-                        <i class="play_icon"><span class="blind">재생</span></i>
-                        <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
-                      </div>
-                      <div class="desc_area">
-                        <em>골영상</em>
-                        <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
-                        <div class="source">
-                          <span>D조 (2022 카타르 월드컵)</span>
+                      </a>
+                    </div>
+                    <div class="card_item">
+                      <a href="/">
+                        <div class="thumb_area">
+                          <img src="./assets/img/container/thema-cast-sports-part/top_issue_1.jpeg" width="232" height="130" alt="탑 이슈 이미지1">
+                          <i class="play_icon"><span class="blind">재생</span></i>
+                          <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
                         </div>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="card_item">
-                    <a href="/">
-                      <div class="thumb_area">
-                        <img src="./assets/img/container/thema-cast-sports-part/top_issue_1.jpeg" width="232" height="130" alt="탑 이슈 이미지1">
-                        <i class="play_icon"><span class="blind">재생</span></i>
-                        <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
-                      </div>
-                      <div class="desc_area">
-                        <em>골영상</em>
-                        <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
-                        <div class="source">
-                          <span>D조 (2022 카타르 월드컵)</span>
+                        <div class="desc_area">
+                          <em>골영상</em>
+                          <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
+                          <div class="source">
+                            <span>D조 (2022 카타르 월드컵)</span>
+                          </div>
                         </div>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="card_item">
-                    <a href="/">
-                      <div class="thumb_area">
-                        <img src="./assets/img/container/thema-cast-sports-part/top_issue_1.jpeg" width="232" height="130" alt="탑 이슈 이미지1">
-                        <i class="play_icon"><span class="blind">재생</span></i>
-                        <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
-                      </div>
-                      <div class="desc_area">
-                        <em>골영상</em>
-                        <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
-                        <div class="source">
-                          <span>D조 (2022 카타르 월드컵)</span>
+                      </a>
+                    </div>
+                    <div class="card_item">
+                      <a href="/">
+                        <div class="thumb_area">
+                          <img src="./assets/img/container/thema-cast-sports-part/top_issue_1.jpeg" width="232" height="130" alt="탑 이슈 이미지1">
+                          <i class="play_icon"><span class="blind">재생</span></i>
+                          <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
                         </div>
-                      </div>
-                    </a>
+                        <div class="desc_area">
+                          <em>골영상</em>
+                          <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
+                          <div class="source">
+                            <span>D조 (2022 카타르 월드컵)</span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="card_item">
+                      <a href="/">
+                        <div class="thumb_area">
+                          <img src="./assets/img/container/thema-cast-sports-part/top_issue_1.jpeg" width="232" height="130" alt="탑 이슈 이미지1">
+                          <i class="play_icon"><span class="blind">재생</span></i>
+                          <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
+                        </div>
+                        <div class="desc_area">
+                          <em>골영상</em>
+                          <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
+                          <div class="source">
+                            <span>D조 (2022 카타르 월드컵)</span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="card_item">
+                      <a href="/">
+                        <div class="thumb_area">
+                          <img src="./assets/img/container/thema-cast-sports-part/top_issue_1.jpeg" width="232" height="130" alt="탑 이슈 이미지1">
+                          <i class="play_icon"><span class="blind">재생</span></i>
+                          <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
+                        </div>
+                        <div class="desc_area">
+                          <em>골영상</em>
+                          <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
+                          <div class="source">
+                            <span>D조 (2022 카타르 월드컵)</span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="card_item">
+                      <a href="/">
+                        <div class="thumb_area">
+                          <img src="./assets/img/container/thema-cast-sports-part/top_issue_1.jpeg" width="232" height="130" alt="탑 이슈 이미지1">
+                          <i class="play_icon"><span class="blind">재생</span></i>
+                          <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
+                        </div>
+                        <div class="desc_area">
+                          <em>골영상</em>
+                          <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
+                          <div class="source">
+                            <span>D조 (2022 카타르 월드컵)</span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="card_item">
+                      <a href="/">
+                        <div class="thumb_area">
+                          <img src="./assets/img/container/thema-cast-sports-part/top_issue_1.jpeg" width="232" height="130" alt="탑 이슈 이미지1">
+                          <i class="play_icon"><span class="blind">재생</span></i>
+                          <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
+                        </div>
+                        <div class="desc_area">
+                          <em>골영상</em>
+                          <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
+                          <div class="source">
+                            <span>D조 (2022 카타르 월드컵)</span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
                   </div>
                 </div>
-                <div class="thema_view_list_inner">
-                  <div class="card_item">
-                    <a href="/">
-                      <div class="thumb_area">
-                        <img src="./assets/img/container/thema-cast-sports-part/top_issue_3.jpeg" width="232" height="130" alt="탑 이슈 이미지1">
-                        <i class="play_icon"><span class="blind">재생</span></i>
-                        <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
-                      </div>
-                      <div class="desc_area">
-                        <em>골영상</em>
-                        <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
-                        <div class="source">
-                          <span>D조 (2022 카타르 월드컵)</span>
+                <!-- 두번째 -->
+                <div class="media_view_list">
+                  <div class="media_view_list_inner">
+                    <div class="card_item">
+                      <a href="/">
+                        <div class="thumb_area">
+                          <img src="./assets/img/container/thema-cast-sports-part/top_issue_3.jpeg" width="232" height="130" alt="탑 이슈 이미지1">
+                          <i class="play_icon"><span class="blind">재생</span></i>
+                          <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
                         </div>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="card_item">
-                    <a href="/">
-                      <div class="thumb_area">
-                        <img src="./assets/img/container/thema-cast-sports-part/top_issue_3.jpeg" width="232" height="130" alt="탑 이슈 이미지1">
-                        <i class="play_icon"><span class="blind">재생</span></i>
-                        <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
-                      </div>
-                      <div class="desc_area">
-                        <em>골영상</em>
-                        <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
-                        <div class="source">
-                          <span>D조 (2022 카타르 월드컵)</span>
+                        <div class="desc_area">
+                          <em>골영상</em>
+                          <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
+                          <div class="source">
+                            <span>D조 (2022 카타르 월드컵)</span>
+                          </div>
                         </div>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="card_item">
-                    <a href="/">
-                      <div class="thumb_area">
-                        <img src="./assets/img/container/thema-cast-sports-part/top_issue_3.jpeg" width="232" height="130" alt="탑 이슈 이미지1">
-                        <i class="play_icon"><span class="blind">재생</span></i>
-                        <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
-                      </div>
-                      <div class="desc_area">
-                        <em>골영상</em>
-                        <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
-                        <div class="source">
-                          <span>D조 (2022 카타르 월드컵)</span>
+                      </a>
+                    </div>
+                    <div class="card_item">
+                      <a href="/">
+                        <div class="thumb_area">
+                          <img src="./assets/img/container/thema-cast-sports-part/top_issue_4.jpeg" width="232" height="130" alt="탑 이슈 이미지1">
+                          <i class="play_icon"><span class="blind">재생</span></i>
+                          <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
                         </div>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="card_item">
-                    <a href="/">
-                      <div class="thumb_area">
-                        <img src="./assets/img/container/thema-cast-sports-part/top_issue_3.jpeg" width="232" height="130" alt="탑 이슈 이미지1">
-                        <i class="play_icon"><span class="blind">재생</span></i>
-                        <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
-                      </div>
-                      <div class="desc_area">
-                        <em>골영상</em>
-                        <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
-                        <div class="source">
-                          <span>D조 (2022 카타르 월드컵)</span>
+                        <div class="desc_area">
+                          <em>골영상</em>
+                          <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
+                          <div class="source">
+                            <span>D조 (2022 카타르 월드컵)</span>
+                            <span class="date">1시간 전</span>
+                          </div>
                         </div>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="card_item">
-                    <a href="/">
-                      <div class="thumb_area">
-                        <img src="./assets/img/container/thema-cast-sports-part/top_issue_3.jpeg" width="232" height="130" alt="탑 이슈 이미지1">
-                        <i class="play_icon"><span class="blind">재생</span></i>
-                        <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
-                      </div>
-                      <div class="desc_area">
-                        <em>골영상</em>
-                        <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
-                        <div class="source">
-                          <span>D조 (2022 카타르 월드컵)</span>
+                      </a>
+                    </div>
+                    <div class="card_item">
+                      <a href="/">
+                        <div class="thumb_area">
+                          <img src="./assets/img/container/thema-cast-sports-part/top_issue_5.jpeg" width="232" height="130" alt="탑 이슈 이미지1">
+                          <i class="play_icon"><span class="blind">재생</span></i>
+                          <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
                         </div>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="card_item">
-                    <a href="/">
-                      <div class="thumb_area">
-                        <img src="./assets/img/container/thema-cast-sports-part/top_issue_3.jpeg" width="232" height="130" alt="탑 이슈 이미지1">
-                        <i class="play_icon"><span class="blind">재생</span></i>
-                        <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
-                      </div>
-                      <div class="desc_area">
-                        <em>골영상</em>
-                        <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
-                        <div class="source">
-                          <span>D조 (2022 카타르 월드컵)</span>
+                        <div class="desc_area">
+                          <em>골영상</em>
+                          <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
+                          <div class="source">
+                            <span>D조 (2022 카타르 월드컵)</span>
+                          </div>
                         </div>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="card_item">
-                    <a href="/">
-                      <div class="thumb_area">
-                        <img src="./assets/img/container/thema-cast-sports-part/top_issue_3.jpeg" width="232" height="130" alt="탑 이슈 이미지1">
-                        <i class="play_icon"><span class="blind">재생</span></i>
-                        <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
-                      </div>
-                      <div class="desc_area">
-                        <em>골영상</em>
-                        <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
-                        <div class="source">
-                          <span>D조 (2022 카타르 월드컵)</span>
+                      </a>
+                    </div>
+                    <div class="card_item">
+                      <a href="/">
+                        <div class="thumb_area">
+                          <img src="./assets/img/container/thema-cast-sports-part/top_issue_1.jpeg" width="232" height="130" alt="탑 이슈 이미지1">
+                          <i class="play_icon"><span class="blind">재생</span></i>
+                          <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
                         </div>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="card_item">
-                    <a href="/">
-                      <div class="thumb_area">
-                        <img src="./assets/img/container/thema-cast-sports-part/top_issue_3.jpeg" width="232" height="130" alt="탑 이슈 이미지1">
-                        <i class="play_icon"><span class="blind">재생</span></i>
-                        <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
-                      </div>
-                      <div class="desc_area">
-                        <em>골영상</em>
-                        <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
-                        <div class="source">
-                          <span>D조 (2022 카타르 월드컵)</span>
+                        <div class="desc_area">
+                          <em>골영상</em>
+                          <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
+                          <div class="source">
+                            <span>D조 (2022 카타르 월드컵)</span>
+                          </div>
                         </div>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="card_item">
-                    <a href="/">
-                      <div class="thumb_area">
-                        <img src="./assets/img/container/thema-cast-sports-part/top_issue_3.jpeg" width="232" height="130" alt="탑 이슈 이미지1">
-                        <i class="play_icon"><span class="blind">재생</span></i>
-                        <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
-                      </div>
-                      <div class="desc_area">
-                        <em>골영상</em>
-                        <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
-                        <div class="source">
-                          <span>D조 (2022 카타르 월드컵)</span>
+                      </a>
+                    </div>
+                    <div class="card_item">
+                      <a href="/">
+                        <div class="thumb_area">
+                          <img src="./assets/img/container/thema-cast-sports-part/top_issue_1.jpeg" width="232" height="130" alt="탑 이슈 이미지1">
+                          <i class="play_icon"><span class="blind">재생</span></i>
+                          <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
                         </div>
-                      </div>
-                    </a>
+                        <div class="desc_area">
+                          <em>골영상</em>
+                          <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
+                          <div class="source">
+                            <span>D조 (2022 카타르 월드컵)</span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="card_item">
+                      <a href="/">
+                        <div class="thumb_area">
+                          <img src="./assets/img/container/thema-cast-sports-part/top_issue_1.jpeg" width="232" height="130" alt="탑 이슈 이미지1">
+                          <i class="play_icon"><span class="blind">재생</span></i>
+                          <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
+                        </div>
+                        <div class="desc_area">
+                          <em>골영상</em>
+                          <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
+                          <div class="source">
+                            <span>D조 (2022 카타르 월드컵)</span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="card_item">
+                      <a href="/">
+                        <div class="thumb_area">
+                          <img src="./assets/img/container/thema-cast-sports-part/top_issue_1.jpeg" width="232" height="130" alt="탑 이슈 이미지1">
+                          <i class="play_icon"><span class="blind">재생</span></i>
+                          <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
+                        </div>
+                        <div class="desc_area">
+                          <em>골영상</em>
+                          <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
+                          <div class="source">
+                            <span>D조 (2022 카타르 월드컵)</span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="card_item">
+                      <a href="/">
+                        <div class="thumb_area">
+                          <img src="./assets/img/container/thema-cast-sports-part/top_issue_1.jpeg" width="232" height="130" alt="탑 이슈 이미지1">
+                          <i class="play_icon"><span class="blind">재생</span></i>
+                          <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
+                        </div>
+                        <div class="desc_area">
+                          <em>골영상</em>
+                          <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
+                          <div class="source">
+                            <span>D조 (2022 카타르 월드컵)</span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="card_item">
+                      <a href="/">
+                        <div class="thumb_area">
+                          <img src="./assets/img/container/thema-cast-sports-part/top_issue_1.jpeg" width="232" height="130" alt="탑 이슈 이미지1">
+                          <i class="play_icon"><span class="blind">재생</span></i>
+                          <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
+                        </div>
+                        <div class="desc_area">
+                          <em>골영상</em>
+                          <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
+                          <div class="source">
+                            <span>D조 (2022 카타르 월드컵)</span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1286,7 +1296,7 @@
                   <a href="/" class="plus_deal_icon">
                     <span class="blind">원쁠딜</span>
                   </a>
-                  <span>원쁠딜 전 상품 무료배송!</span>
+                  <strong>원쁠딜 전 상품 무료배송!</strong>
                 </div>
 
                 <div class="shop_control">
@@ -1378,7 +1388,7 @@
             </div>
           </div>
         </div>
-    </main>
+    </div>
 
     <footer role="footer">
         <div class="footer_inner">
@@ -1463,12 +1473,47 @@
               </div>
 
               <div class="service_wrap">
-                <div class="service_box"></div>
-                <div class="service_box"></div>
+                <div class="service_box">
+                  <a href="/" class="service_logo">
+                    <img src="./assets/img/footer/footer-service-image-1.png" width="48" height="48" alt="웨일브라우저" />
+                  </a>
+                  <div class="service_info">
+                    <strong>웨일 브라우저</strong>
+                    <a href="/">다운받기</a>
+                  </div>
+                </div>
+                <div class="service_box">
+                  <a href="/" class="service_logo">
+                    <img src="./assets/img/footer/footer-service-image-2.png" width="47" height="50" alt="프로젝트 꽃" />
+                  </a>
+                  <div class="service_info">
+                    <strong>프로젝트 꽃</strong>
+                    <a href="/">바로가기</a>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="corp_area"></div>
+
+            <div class="corp_area">
+              <h3 class="blind">네이버 정책 및 약관</h3>
+              <ul class="corp_list">
+                <li class="corp_item"><a href="/">회사소개</a></li>
+                <li class="corp_item"><a href="/">인재채용</a></li>
+                <li class="corp_item"><a href="/">제휴제안</a></li>
+                <li class="corp_item"><a href="/">이용약관</a></li>
+                <li class="corp_item"><a href="/">개인정보처리방침</a></li>
+                <li class="corp_item"><a href="/">청소년보호정책</a></li>
+                <li class="corp_item"><a href="/">네이버 정책</a></li>
+                <li class="corp_item"><a href="/">고객센터</a></li>
+              </ul>
+              <address class="address strong">
+                <a href="/">ⓒ NAVER Corp.</a>
+              </address>
+            </div>
         </div>
     </footer>
+
+    <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+    <script src="/assets/js/main.js"></script>
   </body>
 </html>
