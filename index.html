@@ -139,24 +139,47 @@
               <a href="" class="more_button">더보기</a>
             </div>
 
-            <div class="weather_group">
-              <div class="air_conditanal_box">
-                <a href="">
-                  <ul>
-                    <li class="item">
-                      <span class="item_title">미세</span>
-                      <i class="item_icon low"></i>
-                      <span class="item_condition">좋음</span>
-                    </li>
-                    <i class="divider"></i>
-                    <li class="item">
-                      <span class="item_title">초미세</span>
-                      <i class="item_icon strong"></i>
-                      <span class="item_condition">좋음</span>
-                    </li>
-                  </ul>
-                  <span class="location">구로동</span>
-                </a>
+            <div class="weather_mask">
+              <div class="weather_group active">
+                <div class="air_conditional_box">
+                  <a href="">
+                    <ul>
+                      <li class="item">
+                        <span class="item_title">미세</span>
+                        <i class="item_icon low"></i>
+                        <span class="item_condition">좋음</span>
+                      </li>
+                      <i class="divider"></i>
+                      <li class="item">
+                        <span class="item_title">초미세</span>
+                        <i class="item_icon strong"></i>
+                        <span class="item_condition">좋음</span>
+                      </li>
+                    </ul>
+                    <span class="location">구로동</span>
+                  </a>
+                </div>
+              </div>
+
+              <div class="weather_group">
+                <div class="air_conditional_box">
+                  <a href="">
+                    <ul>
+                      <li class="item">
+                        <span class="item_title">미세1</span>
+                        <i class="item_icon low"></i>
+                        <span class="item_condition">좋음</span>
+                      </li>
+                      <i class="divider"></i>
+                      <li class="item">
+                        <span class="item_title">초미세1</span>
+                        <i class="item_icon strong"></i>
+                        <span class="item_condition">좋음</span>
+                      </li>
+                    </ul>
+                    <span class="location">구로동</span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -876,7 +899,6 @@
         <!-- column_right -->
         <div class="column_right">
           <div class="column_right_inner">
-
             <div class="account_login_group">
               <h2 class="blind">로그인</h2>
               <p class="login_message">네이버를 더 안전하고 편리하게 이용하세요</p>
@@ -1513,7 +1535,8 @@
         </div>
     </footer>
 
-    <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
     <script src="/assets/js/main.js"></script>
   </body>
 </html>

@@ -484,23 +484,59 @@ header {
 }
 
 /* weadhter_grup */
-.weather_group {
+.weather_mask {
+  overflow: hidden;
+  width: 270px;
+  height: 49px;
+  float: right;
   position: absolute;
   top: 0;
   right: 30px;
 }
 
-.air_conditanal_box {
-  display: inline-block;
+.weather_group {
+  overflow: hidden;
+  position: absolute;
+  /* top: -45px; */
+  bottom: 0;
+  right: 0px;
+}
+
+.weather_group.active {
+  animation: cycle 3s linear infinite;
+}
+
+.air_conditional_box {
+  display: block;
   max-width: 100%;
   padding: 17px 0 16px;
 }
 
-.air_conditanal_box ul {
+.air_conditional_box a {
+  display: block;
+}
+
+@keyframes cycle {
+  0% {
+    bottom: -49px;
+  }
+  20% {
+    bottom: 0;
+  }
+  90% {
+    bottom: 0;
+  }
+  100% {
+    bottom: 49px;
+    opacity: 1;
+  }
+}
+
+.air_conditional_box ul {
   margin-right: 9px;
 }
 
-.air_conditanal_box ul,
+.air_conditional_box ul,
 .item,
 .divider {
   display: inline-block;
@@ -508,25 +544,25 @@ header {
   font-size: 0;
 }
 
-.air_conditanal_box .item .item_title {
+.air_conditional_box .item .item_title {
   color: #505050;
   font-size: 12px;
   line-height: 16px;
 }
 
-.air_conditanal_box .item .item_condition {
+.air_conditional_box .item .item_condition {
   font-size: 13px;
   line-height: 13px;
   font-weight: bold;
   margin-left: 6px;
 }
 
-.air_conditanal_box .item_icon {
+.air_conditional_box .item_icon {
   margin-left: 7px;
   vertical-align: top;
 }
 
-.air_conditanal_box .item_icon.low {
+.air_conditional_box .item_icon.low {
   width: 18px;
   height: 18px;
   background-position: -420px -266px;
@@ -538,7 +574,7 @@ header {
   vertical-align: top;
 }
 
-.air_conditanal_box .item_icon.strong {
+.air_conditional_box .item_icon.strong {
   width: 18px;
   height: 18px;
   background-position: -420px -266px;
@@ -550,7 +586,7 @@ header {
   vertical-align: top;
 }
 
-.air_conditanal_box .divider {
+.air_conditional_box .divider {
   display: inline-block;
   width: 1px;
   height: 10px;
@@ -558,7 +594,7 @@ header {
   margin: 3px 10px 0 10px;
 }
 
-.air_conditanal_box .location {
+.air_conditional_box .location {
   color: gray;
 }
 /* //header */
