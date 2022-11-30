@@ -6,13 +6,14 @@ $(document).ready(function () {
   });
 
   $(".weather_group").not(".active").hide();
-  setInterval(nextSlide, 3000);
+  setInterval(nextSlide, 5000);
 
   function nextSlide() {
     $(".weather_group").hide();
     var allSlide = $(".weather_group");
     var currentIndex = 0;
-    $(".weather_group").each(function (index, item) {
+
+    $(".weather_group").each(function (index) {
       if ($(this).hasClass("active")) {
         currentIndex = index;
       }

@@ -503,7 +503,7 @@ header {
 }
 
 .weather_group.active {
-  animation: cycle 3s linear infinite;
+  animation: cycle 5s linear infinite;
 }
 
 .air_conditional_box {
@@ -520,10 +520,10 @@ header {
   0% {
     bottom: -49px;
   }
-  20% {
+  3% {
     bottom: 0;
   }
-  90% {
+  97% {
     bottom: 0;
   }
   100% {
