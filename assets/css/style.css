@@ -1151,22 +1151,22 @@ header {
 .category_box {
   font-size: 0;
   line-height: 0;
-  white-space: nowrap;
 }
 
-.category_box::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+.categort_wrap {
+  width: 940px;
+}
+
+.category_box::after {
   content: "";
-  border: 1px solid #dae1e6;
+  display: table;
+  table-layout: fixed;
+  clear: both;
 }
 
 .category_box .item {
   float: left;
-  width: 94px;
+  width: 93px;
   height: 49px;
   text-align: center;
   line-height: 49px;
@@ -1175,7 +1175,7 @@ header {
 
 .category_box .item a {
   display: block;
-  border-right: 1px solid #dae1e6;
+  /* border-right: 1px solid #dae1e6; */
   font-size: 13px;
   line-height: 49px;
   font-weight: 700;
@@ -1193,7 +1193,11 @@ header {
   vertical-align: 4px;
 }
 /* 카테고리 아이템 의 a 에 active 되었을 경우 색상 바뀌도록 */
-.category_box .item a.active {
+/* .category_box .item a.active {
+  background-color: #0147b5;
+  color: #fff;
+} */
+.category_box .slick-slide.slick-current a {
   background-color: #0147b5;
   color: #fff;
 }

@@ -61,19 +61,47 @@ $(document).ready(function () {
     }
   });
 
-  // 오늘 읽을만한 글 네비
-  const themaCategorySlider = $(".thema_category_slider_wrap").slick({
+  // 오늘 읽을만한 글 콘텐츠 슬라이더
+  var themaCategorySlider = $(".thema_slider_contents_wrap").slick({
+    fade: true,
+    initialSlide: 0,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    speed: 50,
+    asNavFor: ".thema_slider_nav",
+  });
+
+  themaCategorySlider.on("afterChange", function (_event, slick, currentSlide) {
+    // console.log("currentSlide::", currentSlide, "slick::", slick);
+  });
+
+  // 오늘 읽을만한 글 네비게이션 슬라이더
+  var themaCategoryNav = $(".thema_slider_nav").slick({
+    initialSlide: 0,
+    slidesToShow: 8,
+    // slidesToScroll: 1,
+    asNavFor: ".thema_slider_contents_wrap",
     arrows: true,
+    focusOnSelect: true,
+    draggable: false,
+    infinite: false,
     prevArrow:
       '<button class="thema_category arrow_button left_button"></button>',
     nextArrow:
       '<button class="thema_category arrow_button right_button"></button>',
-    initialSlide: 0,
-    slidesToShow: 8,
-    slidesToScroll: 1,
-    speed: 50,
-    infinite: false,
   });
 
-  themaCategorySlider.on(function (_event, slick, currentSlide, nextSlide) {});
+  $(".thema_category.left_button").hide();
+
+  themaCategoryNav.on("afterChange", function (_event, slick, currentSlide) {
+    if (currentSlide === 0) {
+      $(".thema_category.left_button").hide();
+      $(".thema_category.right_button").show();
+    } else if (currentSlide === slick.$slides.length) {
+      $(".thema_category.right_button").hide();
+    } else {
+      $(".thema_category.left_button").show();
+      $(".thema_category.right_button").show();
+    }
+  });
 });
