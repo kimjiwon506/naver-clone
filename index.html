@@ -1,478 +1,966 @@
 <!DOCTYPE html>
 <html lang="ko">
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Naver-clone</title>
-    <!-- style -->
-    <link rel="stylesheet" href="./assets/css/reset.css" type="text/css">
-    <link rel="stylesheet" href="./assets/css/style.css" type="text/css">
-    <link rel="stylesheet" href="./assets/css/common.css" type="text/css">
-  </head>
-  <body>
-    <div class="top_banner">
-        <div class="top_banner_inner">
-            <span>매일 쓰는 브라우저 보안이 걱정된다면, <strong class="strong">안전하고 빠른 최신 브라우저 웨일로 업데이트 하세요.</strong></span>
-            <a class="download_button" href="/">
-                <span>다운로드</span>
-            </a>
-            <button class="close_button">3일 동안 보지 않기</button>
+<title>Naver-clone</title>
+<!-- style -->
+<link rel="stylesheet" href="./assets/css/reset.css" type="text/css">
+<link rel="stylesheet" href="./assets/css/style.css" type="text/css">
+<link rel="stylesheet" href="./assets/css/common.css" type="text/css">
+
+<!-- slick slider -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+<!-- script -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="/assets/js/main.js"></script>
+</head>
+
+<body>
+  <div class="top_banner">
+    <div class="top_banner_inner">
+      <span>매일 쓰는 브라우저 보안이 걱정된다면, <strong class="strong">안전하고 빠른 최신 브라우저 웨일로 업데이트 하세요.</strong></span>
+      <a class="download_button" href="/">
+        <span>다운로드</span>
+      </a>
+      <button class="close_button">3일 동안 보지 않기</button>
+    </div>
+  </div>
+
+  <header role="header">
+    <div class="header_top">
+      <div class="header_top_inner">
+        <div class="logo_area">
+          <h1><a href=""><span class="blind">네이버</span></a></h1>
         </div>
+
+        <div class="service_area">
+          <a href="/" class="set_home_button">네이버를 시작페이지로</a>
+          <i class="divider"></i>
+          <a href="/" class="junior_naver_button">
+            <i></i>
+            <span class="blind">쥬니어네이버</span>
+          </a>
+          <a href="" class="happy_bean_button">
+            <i></i>
+            <span class="blind">해피빈</span>
+          </a>
+        </div>
+
+        <div class="search_area">
+          <form action="" id="search_form">
+            <fieldset>
+              <legend class="blind">검색</legend>
+              <div class="window_box">
+                <input type="text" title="검색어 입력">
+              </div>
+            </fieldset>
+
+            <button class="search_button">
+              <span class="blind">검색</span>
+              <span class="search_icon"></span>
+            </button>
+
+            <a class="keyboard_button">
+              <span class="blind">한글 입력기</span>
+              <span class="keyboard_icon"></span>
+            </a>
+
+            <a href="/" class="auto_complete_button" role="button">
+              <span class="blind">자동완성 레이어</span>
+              <span class="arrow_icon"></span>
+            </a>
+          </form>
+        </div>
+      </div>
     </div>
 
-    <header role="header">
-        <div class="header_top">
-            <div class="header_top_inner">
-                <div class="logo_area">
-                    <h1><a href=""><span class="blind">네이버</span></a></h1>
-                </div>
+    <div class="gnb" role="navigation">
+      <div class="gnb_inner">
+        <div class="nav_group">
+          <ul class="personal_nav_list">
+            <li class="list_item">
+              <a href="/">
+                <i class="mail_icon"></i>메일
+              </a>
+            </li>
+            <li class="list_item">
+              <a href="/">카페</a>
+            </li>
+            <li class="list_item">
+              <a href="/">블로그</a>
+            </li>
+            <li class="list_item">
+              <a href="/">지식iN</a>
+            </li>
+            <li class="list_item">
+              <a href="/" class="shopping_item">
+                <span class="blind">
+                  쇼핑
+                </span>
+              </a>
+            </li>
+            <li class="list_item">
+              <a href="/" class="shopping_live_item">
+                <span class="blind">쇼핑라이브</span>
+              </a>
+            </li>
+            <li class="list_item">
+              <a href="/">Pay</a>
+            </li>
+            <li class="list_item">
+              <a href="/">
+                <i class="tv_icon"></i>TV
+              </a>
+            </li>
+          </ul>
 
-                <div class="service_area">
-                  <a href="/" class="set_home_button">네이버를 시작페이지로</a>
-                  <i class="divider"></i>
-                  <a href="/" class="junior_naver_button">
-                      <i></i>
-                      <span class="blind">쥬니어네이버</span>
-                  </a>
-                  <a href="" class="happy_bean_button">
-                      <i></i>
-                      <span class="blind">해피빈</span>
-                  </a>
-                </div>
+          <ul class="favorit_nav_list">
+            <li class="list_item">
+              <a href="">사전</a>
+            </li>
+            <li class="list_item">
+              <a href="">뉴스</a>
+            </li>
+            <li class="list_item">
+              <a href="">증권</a>
+            </li>
+            <li class="list_item">
+              <a href="">부동산</a>
+            </li>
+            <li class="list_item">
+              <a href="">지도</a>
+            </li>
+            <li class="list_item">
+              <a href="">VIBE</a>
+            </li>
+            <li class="list_item">
+              <a href="">도서</a>
+            </li>
+            <li class="list_item">
+              <a href="">웹툰</a>
+            </li>
+          </ul>
 
-                <div class="search_area">
-                  <form action="" id="search_form">
-                      <fieldset>
-                          <legend class="blind">검색</legend>
-                          <div class="window_box">
-                              <input type="text" title="검색어 입력">
-                          </div>
-                      </fieldset>
-                      
-                      <button class="search_button">
-                          <span class="blind">검색</span>
-                          <span class="search_icon"></span>
-                      </button>
-
-                      <a class="keyboard_button">
-                        <span class="blind">한글 입력기</span>
-                        <span class="keyboard_icon"></span>
-                      </a>
-
-                      <a href="/" class="auto_complete_button" role="button">
-                        <span class="blind">자동완성 레이어</span>
-                        <span class="arrow_icon"></span>
-                      </a>
-                  </form>
-                </div>
-            </div>
+          <a href="" class="more_button">더보기</a>
         </div>
 
-        <div class="gnb" role="navigation">
-          <div class="gnb_inner">
-            <div class="nav_group">
-              <ul class="personal_nav_list">
-                <li class="list_item">
-                  <a href="/">
-                    <i class="mail_icon"></i>메일
-                  </a>
-                </li>
-                <li class="list_item">
-                  <a href="/">카페</a>
-                </li>
-                <li class="list_item">
-                  <a href="/">블로그</a>
-                </li>
-                <li class="list_item">
-                  <a href="/">지식iN</a>
-                </li>
-                <li class="list_item">
-                  <a href="/" class="shopping_item">
-                    <span class="blind">
-                    쇼핑
-                    </span>
-                  </a>
-                </li>
-                <li class="list_item">
-                  <a href="/" class="shopping_live_item">
-                    <span class="blind">쇼핑라이브</span>
-                  </a>
-                </li>
-                <li class="list_item">
-                  <a href="/">Pay</a>
-                </li>
-                <li class="list_item">
-                  <a href="/">
-                    <i class="tv_icon"></i>TV
-                  </a>
-                </li>
-              </ul>
-
-              <ul class="favorit_nav_list">
-                <li class="list_item">
-                  <a href="">사전</a>
-                </li>
-                <li class="list_item">
-                  <a href="">뉴스</a>
-                </li>
-                <li class="list_item">
-                  <a href="">증권</a>
-                </li>
-                <li class="list_item">
-                  <a href="">부동산</a>
-                </li>
-                <li class="list_item">
-                  <a href="">지도</a>
-                </li>
-                <li class="list_item">
-                  <a href="">VIBE</a>
-                </li>
-                <li class="list_item">
-                  <a href="">도서</a>
-                </li>
-                <li class="list_item">
-                  <a href="">웹툰</a>
-                </li>
-              </ul>
-
-              <a href="" class="more_button">더보기</a>
+        <div class="weather_mask">
+          <div class="weather_group active">
+            <div class="air_conditional_box">
+              <a href="">
+                <ul>
+                  <li class="item">
+                    <span class="item_title">미세</span>
+                    <i class="item_icon low"></i>
+                    <span class="item_condition">좋음</span>
+                  </li>
+                  <i class="divider"></i>
+                  <li class="item">
+                    <span class="item_title">초미세</span>
+                    <i class="item_icon strong"></i>
+                    <span class="item_condition">좋음</span>
+                  </li>
+                </ul>
+                <span class="location">구로동</span>
+              </a>
             </div>
+          </div>
 
-            <div class="weather_mask">
-              <div class="weather_group active">
-                <div class="air_conditional_box">
-                  <a href="">
-                    <ul>
-                      <li class="item">
-                        <span class="item_title">미세</span>
-                        <i class="item_icon low"></i>
-                        <span class="item_condition">좋음</span>
-                      </li>
-                      <i class="divider"></i>
-                      <li class="item">
-                        <span class="item_title">초미세</span>
-                        <i class="item_icon strong"></i>
-                        <span class="item_condition">좋음</span>
-                      </li>
-                    </ul>
-                    <span class="location">구로동</span>
-                  </a>
-                </div>
-              </div>
-
-              <div class="weather_group">
-                <div class="air_conditional_box">
-                  <a href="">
-                    <ul>
-                      <li class="item">
-                        <span class="item_title">두번째</span>
-                        <i class="item_icon low"></i>
-                        <span class="item_condition">좋음</span>
-                      </li>
-                      <i class="divider"></i>
-                      <li class="item">
-                        <span class="item_title">두번째</span>
-                        <i class="item_icon strong"></i>
-                        <span class="item_condition">좋음</span>
-                      </li>
-                    </ul>
-                    <span class="location">구로동</span>
-                  </a>
-                </div>
-              </div>
+          <div class="weather_group">
+            <div class="air_conditional_box">
+              <a href="">
+                <ul>
+                  <li class="item">
+                    <span class="item_title">두번째</span>
+                    <i class="item_icon low"></i>
+                    <span class="item_condition">좋음</span>
+                  </li>
+                  <i class="divider"></i>
+                  <li class="item">
+                    <span class="item_title">두번째</span>
+                    <i class="item_icon strong"></i>
+                    <span class="item_condition">좋음</span>
+                  </li>
+                </ul>
+                <span class="location">구로동</span>
+              </a>
             </div>
           </div>
         </div>
-    </header>
+      </div>
+    </div>
+  </header>
 
-    <div class="container" role="main">
-        <div class="column_left">
-          <!-- 광고배너 -->
-          <div class="banner_top">
-            <a href="">
-              <img src="./assets/img/container/top-banner-image.jpg" alt="">
+  <div class="container" role="main">
+    <div class="column_left">
+      <!-- 광고배너 -->
+      <div class="banner_top">
+        <a href="">
+          <img src="./assets/img/container/top-banner-image.jpg" alt="">
+        </a>
+      </div>
+
+      <!-- 뉴스스탠드 카테고리 -->
+      <div class="news_stand_box">
+        <h2 class="blind">뉴스 스탠드</h2>
+
+        <div class="news_stand_header">
+          <div class="issue_area">
+            <a href="/" class="issue_title">연합뉴스</a>
+            <div class="rolling_box">
+              <a class="text ellipsis">[속보] 이태원 특위, 국조 계획서 채택…대검은 마약전담부서만 마약전담부서만</a>
+            </div>
+          </div>
+
+          <div class="direct_area">
+            <a href="" class="today_image">
+              <span class="blind">QATAR 2022</span>
+            </a>
+            <a href="/" class="news_home">뉴스홈</a>
+            <a href="/" class="nomarl_button">연예</a>
+            <a href="/" class="nomarl_button">스포츠</a>
+            <a href="/" class="nomarl_button">경제</a>
+          </div>
+        </div>
+
+        <div class="news_stand_title">
+          <a href="" class="title_button">뉴스스탠드</a>
+
+          <div class="press_box">
+            <a href="">구독한 언론사</a>
+            <a href="" class="total_press bold">전체언론사</a>
+          </div>
+
+          <div class="set_icon_box">
+            <a href="/">
+              <span class="blind">리스트형</span>
+              <i class="set_icon_list"></i>
+            </a>
+            <a href="/">
+              <span class="blind">섬네일형</span>
+              <i class="set_icon_tumb"></i>
+            </a>
+            <a href="/">
+              <span class="blind">설정</span>
+              <i class="set_icon_setting"></i>
             </a>
           </div>
+        </div>
 
-          <!-- 뉴스스탠드 카테고리 -->
-          <div class="news_stand_box">
-            <h2 class="blind">뉴스 스탠드</h2>
+      </div>
 
-            <div class="news_stand_header">
-              <div class="issue_area">
-                <a href="/" class="issue_title">연합뉴스</a>
-                <div class="rolling_box">
-                  <a class="text ellipsis">[속보] 이태원 특위, 국조 계획서 채택…대검은 마약전담부서만 마약전담부서만</a>
-                </div>
+      <!-- 뉴스스탠드 언론사 콘테이너 -->
+      <div class="news_stand_container">
+        <div class="line_group">
+          <i class="line top1"></i>
+          <i class="line top2"></i>
+          <i class="line top3"></i>
+          <i class="line right1"></i>
+          <i class="line right2"></i>
+          <i class="line right3"></i>
+          <i class="line right4"></i>
+          <i class="line right5"></i>
+        </div>
+        <div class="news_stand_slider_wrap">
+          <ul class="tumb_group">
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/1.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
               </div>
-              
-              <div class="direct_area">
-                <a href="" class="today_image">
-                  <span class="blind">QATAR 2022</span>
-                </a>
-                <a href="/" class="news_home">뉴스홈</a>
-                <a href="/" class="nomarl_button">연예</a>
-                <a href="/" class="nomarl_button">스포츠</a>
-                <a href="/" class="nomarl_button">경제</a>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/2.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
               </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/3.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/4.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/5.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/6.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/7.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/8.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/9.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/10.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/11.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/12.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/13.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/14.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/15.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/16.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/14.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/15.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/16.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/17.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/18.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/19.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/20.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/21.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+          </ul>
+          <ul class="tumb_group">
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/24.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/23.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/22.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/21.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/20.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/19.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/18.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/17.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/16.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/15.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/14.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/13.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/12.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/11.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/10.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/9.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/8.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/7.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/6.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/5.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/4.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/3.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/2.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/1.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+          </ul>
+          <ul class="tumb_group">
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/15.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/16.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/17.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/18.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/19.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/19.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/18.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/17.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/16.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/15.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/14.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/13.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/12.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/11.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/10.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/9.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/8.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/7.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/6.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/5.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/4.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/3.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/2.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+            <li class="item thumb_hover">
+              <a href="/" class="news1">
+                <img src="./assets/img/container/news-stand-container/1.png" alt="언론사1">
+              </a>
+              <div class="popup_wrap">
+                <a href="/" class="button_news">구독</a>
+                <a href="/" class="button_news">기사보기</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- <a href="/" class="arrow_button left_button">
+          <i><span class="blind">이전버튼</span></i>
+        </a>
+        <a href="/" class="arrow_button right_button">
+          <i><span class="blind">이전버튼</span></i>
+        </a> -->
+      </div>
+
+      <!-- 주제별 테마 카테고리 컨테이너 상하단 padding -->
+      <div class="thema_cast_container">
+        <!-- 주제별 테마 카테고리 타이틀박스 -->
+        <div class="thema_cast_category">
+          <h2 class="blind">주제별 컨텐츠</h2>
+
+          <div class="thema_header">
+            <div class="title_area">
+              <strong class="title">오늘 읽을만한 글</strong>
+              <span class="sub_title">주제별로 분류된 다양한 글 모음</span>
             </div>
-
-            <div class="news_stand_title">
-              <a href="" class="title_button">뉴스스탠드</a>
-
-              <div class="press_box">
-                <a href="">구독한 언론사</a>
-                <a href="" class="total_press bold">전체언론사</a>
-              </div>
-
-              <div class="set_icon_box">
-                <a href="/">
-                  <span class="blind">리스트형</span>
-                  <i class="set_icon_list"></i>
-                </a>
-                <a href="/">
-                  <span class="blind">섬네일형</span>
-                  <i class="set_icon_tumb"></i>
-                </a>
-                <a href="/">
-                  <span class="blind">설정</span>
-                  <i class="set_icon_setting"></i>
-                </a>
-              </div>
+            <div class="info_area">
+              <span class="total_info">
+                <strong>681</strong> 개의 글
+              </span>
+              <a href="/" class="favorit_setting">관심주제 설정</a>
             </div>
-
           </div>
 
-          <!-- 뉴스스탠드 언론사 콘테이너 -->
-          <div class="news_stand_container">
-            <div class="line_group">
-              <i class="line top1"></i>
-              <i class="line top2"></i>
-              <i class="line top3"></i>
-              <i class="line right1"></i>
-              <i class="line right2"></i>
-              <i class="line right3"></i>
-              <i class="line right4"></i>
-              <i class="line right5"></i>
-            </div>
-            <ul class="tumb_group">
-              <li class="item thumb_hover">
-                <a href="/" class="news1">
-                  <img src="./assets/img/container/news-stand-container/1.png" alt="언론사1">
-                </a>
-                <div class="popup_wrap">
-                  <a href="/" class="button_news">구독</a>
-                  <a href="/" class="button_news">기사보기</a>
-                </div>
-              </li>
-              <li class="item thumb_hover">
-                <a href="/" class="news1">
-                  <img src="./assets/img/container/news-stand-container/2.png" alt="언론사1">
-                </a>
-                <div class="popup_wrap">
-                  <a href="/" class="button_news">구독</a>
-                  <a href="/" class="button_news">기사보기</a>
-                </div>
-              </li>
-              <li class="item thumb_hover">
-                <a href="/" class="news1">
-                  <img src="./assets/img/container/news-stand-container/3.png" alt="언론사1">
-                </a>
-                <div class="popup_wrap">
-                  <a href="/" class="button_news">구독</a>
-                  <a href="/" class="button_news">기사보기</a>
-                </div>
-              </li>
-              <li class="item thumb_hover">
-                <a href="/" class="news1">
-                  <img src="./assets/img/container/news-stand-container/4.png" alt="언론사1">
-                </a>
-                <div class="popup_wrap">
-                  <a href="/" class="button_news">구독</a>
-                  <a href="/" class="button_news">기사보기</a>
-                </div>
-              </li>
-              <li class="item thumb_hover">
-                <a href="/" class="news1">
-                  <img src="./assets/img/container/news-stand-container/5.png" alt="언론사1">
-                </a>
-                <div class="popup_wrap">
-                  <a href="/" class="button_news">구독</a>
-                  <a href="/" class="button_news">기사보기</a>
-                </div>
-              </li>
-              <li class="item thumb_hover">
-                <a href="/" class="news1">
-                  <img src="./assets/img/container/news-stand-container/6.png" alt="언론사1">
-                </a>
-                <div class="popup_wrap">
-                  <a href="/" class="button_news">구독</a>
-                  <a href="/" class="button_news">기사보기</a>
-                </div>
-              </li>
-              <li class="item thumb_hover">
-                <a href="/" class="news1">
-                  <img src="./assets/img/container/news-stand-container/7.png" alt="언론사1">
-                </a>
-                <div class="popup_wrap">
-                  <a href="/" class="button_news">구독</a>
-                  <a href="/" class="button_news">기사보기</a>
-                </div>
-              </li>
-              <li class="item thumb_hover">
-                <a href="/" class="news1">
-                  <img src="./assets/img/container/news-stand-container/8.png" alt="언론사1">
-                </a>
-                <div class="popup_wrap">
-                  <a href="/" class="button_news">구독</a>
-                  <a href="/" class="button_news">기사보기</a>
-                </div>
-              </li>
-              <li class="item thumb_hover">
-                <a href="/" class="news1">
-                  <img src="./assets/img/container/news-stand-container/9.png" alt="언론사1">
-                </a>
-                <div class="popup_wrap">
-                  <a href="/" class="button_news">구독</a>
-                  <a href="/" class="button_news">기사보기</a>
-                </div>
-              </li>
-              <li class="item thumb_hover">
-                <a href="/" class="news1">
-                  <img src="./assets/img/container/news-stand-container/10.png" alt="언론사1">
-                </a>
-                <div class="popup_wrap">
-                  <a href="/" class="button_news">구독</a>
-                  <a href="/" class="button_news">기사보기</a>
-                </div>
-              </li>
-              <li class="item thumb_hover">
-                <a href="/" class="news1">
-                  <img src="./assets/img/container/news-stand-container/11.png" alt="언론사1">
-                </a>
-                <div class="popup_wrap">
-                  <a href="/" class="button_news">구독</a>
-                  <a href="/" class="button_news">기사보기</a>
-                </div>
-              </li>
-              <li class="item thumb_hover">
-                <a href="/" class="news1">
-                  <img src="./assets/img/container/news-stand-container/12.png" alt="언론사1">
-                </a>
-                <div class="popup_wrap">
-                  <a href="/" class="button_news">구독</a>
-                  <a href="/" class="button_news">기사보기</a>
-                </div>
-              </li>
-              <li class="item thumb_hover">
-                <a href="/" class="news1">
-                  <img src="./assets/img/container/news-stand-container/13.png" alt="언론사1">
-                </a>
-                <div class="popup_wrap">
-                  <a href="/" class="button_news">구독</a>
-                  <a href="/" class="button_news">기사보기</a>
-                </div>
-              </li>
-              <li class="item thumb_hover">
-                <a href="/" class="news1">
-                  <img src="./assets/img/container/news-stand-container/14.png" alt="언론사1">
-                </a>
-                <div class="popup_wrap">
-                  <a href="/" class="button_news">구독</a>
-                  <a href="/" class="button_news">기사보기</a>
-                </div>
-              </li>
-              <li class="item thumb_hover">
-                <a href="/" class="news1">
-                  <img src="./assets/img/container/news-stand-container/15.png" alt="언론사1">
-                </a>
-                <div class="popup_wrap">
-                  <a href="/" class="button_news">구독</a>
-                  <a href="/" class="button_news">기사보기</a>
-                </div>
-              </li>
-              <li class="item thumb_hover">
-                <a href="/" class="news1">
-                  <img src="./assets/img/container/news-stand-container/16.png" alt="언론사1">
-                </a>
-                <div class="popup_wrap">
-                  <a href="/" class="button_news">구독</a>
-                  <a href="/" class="button_news">기사보기</a>
-                </div>
-              </li>
-              <li class="item thumb_hover">
-                <a href="/" class="news1">
-                  <img src="./assets/img/container/news-stand-container/14.png" alt="언론사1">
-                </a>
-                <div class="popup_wrap">
-                  <a href="/" class="button_news">구독</a>
-                  <a href="/" class="button_news">기사보기</a>
-                </div>
-              </li>
-              <li class="item thumb_hover">
-                <a href="/" class="news1">
-                  <img src="./assets/img/container/news-stand-container/15.png" alt="언론사1">
-                </a>
-                <div class="popup_wrap">
-                  <a href="/" class="button_news">구독</a>
-                  <a href="/" class="button_news">기사보기</a>
-                </div>
-              </li>
-              <li class="item thumb_hover">
-                <a href="/" class="news1">
-                  <img src="./assets/img/container/news-stand-container/16.png" alt="언론사1">
-                </a>
-                <div class="popup_wrap">
-                  <a href="/" class="button_news">구독</a>
-                  <a href="/" class="button_news">기사보기</a>
-                </div>
-              </li>
-              <li class="item thumb_hover">
-                <a href="/" class="news1">
-                  <img src="./assets/img/container/news-stand-container/17.png" alt="언론사1">
-                </a>
-                <div class="popup_wrap">
-                  <a href="/" class="button_news">구독</a>
-                  <a href="/" class="button_news">기사보기</a>
-                </div>
-              </li>
-              <li class="item thumb_hover">
-                <a href="/" class="news1">
-                  <img src="./assets/img/container/news-stand-container/18.png" alt="언론사1">
-                </a>
-                <div class="popup_wrap">
-                  <a href="/" class="button_news">구독</a>
-                  <a href="/" class="button_news">기사보기</a>
-                </div>
-              </li>
-              <li class="item thumb_hover">
-                <a href="/" class="news1">
-                  <img src="./assets/img/container/news-stand-container/19.png" alt="언론사1">
-                </a>
-                <div class="popup_wrap">
-                  <a href="/" class="button_news">구독</a>
-                  <a href="/" class="button_news">기사보기</a>
-                </div>
-              </li>
-              <li class="item thumb_hover">
-                <a href="/" class="news1">
-                  <img src="./assets/img/container/news-stand-container/20.png" alt="언론사1">
-                </a>
-                <div class="popup_wrap">
-                  <a href="/" class="button_news">구독</a>
-                  <a href="/" class="button_news">기사보기</a>
-                </div>
-              </li>
-              <li class="item thumb_hover">
-                <a href="/" class="news1">
-                  <img src="./assets/img/container/news-stand-container/21.png" alt="언론사1">
-                </a>
-                <div class="popup_wrap">
-                  <a href="/" class="button_news">구독</a>
-                  <a href="/" class="button_news">기사보기</a>
-                </div>
-              </li>
+          <div class="thema_category">
+            <ul class="category_box">
+              <li class="item"><a href="/">엔터</a></li>
+              <li class="item"><a href="/" class="active">스포츠</a></li>
+              <li class="item"><a href="/">자동차</a></li>
+              <li class="item"><a href="/">웹툰</a></li>
+              <li class="item"><a href="/">경제</a></li>
+              <li class="item"><a href="/">추천<span class="ico_middot"></span>구독</a></li>
+              <li class="item"><a href="/">레시피</a></li>
+              <li class="item"><a href="/">리빙</a></li>
             </ul>
 
             <a href="/" class="arrow_button left_button">
@@ -483,59 +971,95 @@
             </a>
           </div>
 
-          <!-- 주제별 테마 카테고리 컨테이너 상하단 padding -->
-          <div class="thema_cast_container">
-            <!-- 주제별 테마 카테고리 타이틀박스 -->
-            <div class="thema_cast_category">
-              <h2 class="blind">주제별 컨텐츠</h2>
+        </div>
 
-              <div class="thema_header">
-                <div class="title_area">
-                  <strong class="title">오늘 읽을만한 글</strong>
-                  <span class="sub_title">주제별로 분류된 다양한 글 모음</span>
+        <div class="thema_cast_contents">
+          <div class="banner_world_cup">
+            <a href="/" target="_blank">
+              <img src="./assets/img/container/worldcup_banner.png" width="750" alt="월드컵 이미지">
+            </a>
+          </div>
+
+          <div class="top_issue_group">
+            <div class="card_item">
+              <a href="/">
+                <div class="thumb_area">
+                  <img src="./assets/img/container/thema-cast-sports-part/top_issue_1.jpeg" width="364" height="180"
+                    alt="탑 이슈 이미지1">
+                  <i class="play_icon"><span class="blind">재생</span></i>
+                  <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
                 </div>
-                <div class="info_area">
-                  <span class="total_info">
-                    <strong>681</strong> 개의 글
-                  </span>
-                  <a href="/" class="favorit_setting">관심주제 설정</a>
+                <div class="desc_area">
+                  <em>골영상</em>
+                  <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
+                  <div class="source">
+                    <span>D조 (2022 카타르 월드컵)</span>
+                    <span class="date">1시간 전</span>
+                  </div>
                 </div>
-              </div>
-
-              <div class="thema_category">
-                <ul class="category_box">
-                  <li class="item"><a href="/">엔터</a></li>
-                  <li class="item"><a href="/" class="active">스포츠</a></li>
-                  <li class="item"><a href="/">자동차</a></li>
-                  <li class="item"><a href="/">웹툰</a></li>
-                  <li class="item"><a href="/">경제</a></li>
-                  <li class="item"><a href="/">추천<span class="ico_middot"></span>구독</a></li>
-                  <li class="item"><a href="/">레시피</a></li>
-                  <li class="item"><a href="/">리빙</a></li>
-                </ul>
-
-                <a href="/" class="arrow_button left_button">
-                  <i><span class="blind">이전버튼</span></i>
-                </a>
-                <a href="/" class="arrow_button right_button">
-                  <i><span class="blind">이전버튼</span></i>
-                </a>
-              </div>
-
+              </a>
             </div>
 
-            <div class="thema_cast_contents">
-              <div class="banner_world_cup">
-                <a href="/" target="_blank">
-                  <img src="./assets/img/container/worldcup_banner.png" width="750" alt="월드컵 이미지">
-                </a>
-              </div>
+            <div class="card_item">
+              <a href="/">
+                <div class="thumb_area">
+                  <img src="./assets/img/container/thema-cast-sports-part/top_issue_2.jpeg" width="364" height="180"
+                    alt="탑 이슈 이미지1">
+                  <i class="play_icon"><span class="blind">재생</span></i>
+                  <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
+                </div>
+                <div class="desc_area">
+                  <em>골영상</em>
+                  <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
+                  <div class="source">
+                    <span>D조 (2022 카타르 월드컵)</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
 
-              <div class="top_issue_group">
+          <div class="thema_link">
+            <a href="/" class="sport_home">스포츠 홈</a>
+            <ul>
+              <li><a href="/">야구</a></li>
+              <li><a href="/">해외야구</a></li>
+              <li><a href="/">축구</a></li>
+              <li><a href="/">해외축구</a></li>
+              <li><a href="/">농구</a></li>
+              <li><a href="/">배구</a></li>
+              <li><a href="/">골프</a></li>
+              <li><a href="/">일반</a></li>
+              <li><a href="/">e스포츠</a></li>
+            </ul>
+          </div>
+
+          <div class="media_view_wrap">
+            <!-- 첫번째 -->
+            <div class="media_view_list">
+              <div class="media_view_list_inner">
                 <div class="card_item">
                   <a href="/">
                     <div class="thumb_area">
-                      <img src="./assets/img/container/thema-cast-sports-part/top_issue_1.jpeg" width="364" height="180" alt="탑 이슈 이미지1">
+                      <img src="./assets/img/container/thema-cast-sports-part/top_issue_3.jpeg" width="232" height="130"
+                        alt="탑 이슈 이미지1">
+                      <i class="play_icon"><span class="blind">재생</span></i>
+                      <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
+                    </div>
+                    <div class="desc_area">
+                      <em>골영상</em>
+                      <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
+                      <div class="source">
+                        <span>D조 (2022 카타르 월드컵)</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="card_item">
+                  <a href="/">
+                    <div class="thumb_area">
+                      <img src="./assets/img/container/thema-cast-sports-part/top_issue_4.jpeg" width="232" height="130"
+                        alt="탑 이슈 이미지1">
                       <i class="play_icon"><span class="blind">재생</span></i>
                       <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
                     </div>
@@ -549,11 +1073,113 @@
                     </div>
                   </a>
                 </div>
-
                 <div class="card_item">
                   <a href="/">
                     <div class="thumb_area">
-                      <img src="./assets/img/container/thema-cast-sports-part/top_issue_2.jpeg" width="364" height="180" alt="탑 이슈 이미지1">
+                      <img src="./assets/img/container/thema-cast-sports-part/top_issue_5.jpeg" width="232" height="130"
+                        alt="탑 이슈 이미지1">
+                      <i class="play_icon"><span class="blind">재생</span></i>
+                      <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
+                    </div>
+                    <div class="desc_area">
+                      <em>골영상</em>
+                      <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
+                      <div class="source">
+                        <span>D조 (2022 카타르 월드컵)</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="card_item">
+                  <a href="/">
+                    <div class="thumb_area">
+                      <img src="./assets/img/container/thema-cast-sports-part/top_issue_1.jpeg" width="232" height="130"
+                        alt="탑 이슈 이미지1">
+                      <i class="play_icon"><span class="blind">재생</span></i>
+                      <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
+                    </div>
+                    <div class="desc_area">
+                      <em>골영상</em>
+                      <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
+                      <div class="source">
+                        <span>D조 (2022 카타르 월드컵)</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="card_item">
+                  <a href="/">
+                    <div class="thumb_area">
+                      <img src="./assets/img/container/thema-cast-sports-part/top_issue_1.jpeg" width="232" height="130"
+                        alt="탑 이슈 이미지1">
+                      <i class="play_icon"><span class="blind">재생</span></i>
+                      <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
+                    </div>
+                    <div class="desc_area">
+                      <em>골영상</em>
+                      <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
+                      <div class="source">
+                        <span>D조 (2022 카타르 월드컵)</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="card_item">
+                  <a href="/">
+                    <div class="thumb_area">
+                      <img src="./assets/img/container/thema-cast-sports-part/top_issue_1.jpeg" width="232" height="130"
+                        alt="탑 이슈 이미지1">
+                      <i class="play_icon"><span class="blind">재생</span></i>
+                      <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
+                    </div>
+                    <div class="desc_area">
+                      <em>골영상</em>
+                      <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
+                      <div class="source">
+                        <span>D조 (2022 카타르 월드컵)</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="card_item">
+                  <a href="/">
+                    <div class="thumb_area">
+                      <img src="./assets/img/container/thema-cast-sports-part/top_issue_1.jpeg" width="232" height="130"
+                        alt="탑 이슈 이미지1">
+                      <i class="play_icon"><span class="blind">재생</span></i>
+                      <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
+                    </div>
+                    <div class="desc_area">
+                      <em>골영상</em>
+                      <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
+                      <div class="source">
+                        <span>D조 (2022 카타르 월드컵)</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="card_item">
+                  <a href="/">
+                    <div class="thumb_area">
+                      <img src="./assets/img/container/thema-cast-sports-part/top_issue_1.jpeg" width="232" height="130"
+                        alt="탑 이슈 이미지1">
+                      <i class="play_icon"><span class="blind">재생</span></i>
+                      <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
+                    </div>
+                    <div class="desc_area">
+                      <em>골영상</em>
+                      <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
+                      <div class="source">
+                        <span>D조 (2022 카타르 월드컵)</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="card_item">
+                  <a href="/">
+                    <div class="thumb_area">
+                      <img src="./assets/img/container/thema-cast-sports-part/top_issue_1.jpeg" width="232" height="130"
+                        alt="탑 이슈 이미지1">
                       <i class="play_icon"><span class="blind">재생</span></i>
                       <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
                     </div>
@@ -567,976 +1193,836 @@
                   </a>
                 </div>
               </div>
-
-              <div class="thema_link">
-                <a href="/" class="sport_home">스포츠 홈</a>
-                <ul>
-                  <li><a href="/">야구</a></li>
-                  <li><a href="/">해외야구</a></li>
-                  <li><a href="/">축구</a></li>
-                  <li><a href="/">해외축구</a></li>
-                  <li><a href="/">농구</a></li>
-                  <li><a href="/">배구</a></li>
-                  <li><a href="/">골프</a></li>
-                  <li><a href="/">일반</a></li>
-                  <li><a href="/">e스포츠</a></li>
-                </ul>
-              </div>
-
-              <div class="media_view_wrap">
-                <!-- 첫번째 -->
-                <div class="media_view_list">
-                  <div class="media_view_list_inner">
-                    <div class="card_item">
-                      <a href="/">
-                        <div class="thumb_area">
-                          <img src="./assets/img/container/thema-cast-sports-part/top_issue_3.jpeg" width="232" height="130" alt="탑 이슈 이미지1">
-                          <i class="play_icon"><span class="blind">재생</span></i>
-                          <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
-                        </div>
-                        <div class="desc_area">
-                          <em>골영상</em>
-                          <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
-                          <div class="source">
-                            <span>D조 (2022 카타르 월드컵)</span>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="card_item">
-                      <a href="/">
-                        <div class="thumb_area">
-                          <img src="./assets/img/container/thema-cast-sports-part/top_issue_4.jpeg" width="232" height="130" alt="탑 이슈 이미지1">
-                          <i class="play_icon"><span class="blind">재생</span></i>
-                          <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
-                        </div>
-                        <div class="desc_area">
-                          <em>골영상</em>
-                          <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
-                          <div class="source">
-                            <span>D조 (2022 카타르 월드컵)</span>
-                            <span class="date">1시간 전</span>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="card_item">
-                      <a href="/">
-                        <div class="thumb_area">
-                          <img src="./assets/img/container/thema-cast-sports-part/top_issue_5.jpeg" width="232" height="130" alt="탑 이슈 이미지1">
-                          <i class="play_icon"><span class="blind">재생</span></i>
-                          <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
-                        </div>
-                        <div class="desc_area">
-                          <em>골영상</em>
-                          <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
-                          <div class="source">
-                            <span>D조 (2022 카타르 월드컵)</span>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="card_item">
-                      <a href="/">
-                        <div class="thumb_area">
-                          <img src="./assets/img/container/thema-cast-sports-part/top_issue_1.jpeg" width="232" height="130" alt="탑 이슈 이미지1">
-                          <i class="play_icon"><span class="blind">재생</span></i>
-                          <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
-                        </div>
-                        <div class="desc_area">
-                          <em>골영상</em>
-                          <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
-                          <div class="source">
-                            <span>D조 (2022 카타르 월드컵)</span>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="card_item">
-                      <a href="/">
-                        <div class="thumb_area">
-                          <img src="./assets/img/container/thema-cast-sports-part/top_issue_1.jpeg" width="232" height="130" alt="탑 이슈 이미지1">
-                          <i class="play_icon"><span class="blind">재생</span></i>
-                          <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
-                        </div>
-                        <div class="desc_area">
-                          <em>골영상</em>
-                          <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
-                          <div class="source">
-                            <span>D조 (2022 카타르 월드컵)</span>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="card_item">
-                      <a href="/">
-                        <div class="thumb_area">
-                          <img src="./assets/img/container/thema-cast-sports-part/top_issue_1.jpeg" width="232" height="130" alt="탑 이슈 이미지1">
-                          <i class="play_icon"><span class="blind">재생</span></i>
-                          <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
-                        </div>
-                        <div class="desc_area">
-                          <em>골영상</em>
-                          <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
-                          <div class="source">
-                            <span>D조 (2022 카타르 월드컵)</span>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="card_item">
-                      <a href="/">
-                        <div class="thumb_area">
-                          <img src="./assets/img/container/thema-cast-sports-part/top_issue_1.jpeg" width="232" height="130" alt="탑 이슈 이미지1">
-                          <i class="play_icon"><span class="blind">재생</span></i>
-                          <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
-                        </div>
-                        <div class="desc_area">
-                          <em>골영상</em>
-                          <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
-                          <div class="source">
-                            <span>D조 (2022 카타르 월드컵)</span>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="card_item">
-                      <a href="/">
-                        <div class="thumb_area">
-                          <img src="./assets/img/container/thema-cast-sports-part/top_issue_1.jpeg" width="232" height="130" alt="탑 이슈 이미지1">
-                          <i class="play_icon"><span class="blind">재생</span></i>
-                          <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
-                        </div>
-                        <div class="desc_area">
-                          <em>골영상</em>
-                          <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
-                          <div class="source">
-                            <span>D조 (2022 카타르 월드컵)</span>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="card_item">
-                      <a href="/">
-                        <div class="thumb_area">
-                          <img src="./assets/img/container/thema-cast-sports-part/top_issue_1.jpeg" width="232" height="130" alt="탑 이슈 이미지1">
-                          <i class="play_icon"><span class="blind">재생</span></i>
-                          <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
-                        </div>
-                        <div class="desc_area">
-                          <em>골영상</em>
-                          <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
-                          <div class="source">
-                            <span>D조 (2022 카타르 월드컵)</span>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <!-- 두번째 -->
-                <div class="media_view_list">
-                  <div class="media_view_list_inner">
-                    <div class="card_item">
-                      <a href="/">
-                        <div class="thumb_area">
-                          <img src="./assets/img/container/thema-cast-sports-part/top_issue_3.jpeg" width="232" height="130" alt="탑 이슈 이미지1">
-                          <i class="play_icon"><span class="blind">재생</span></i>
-                          <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
-                        </div>
-                        <div class="desc_area">
-                          <em>골영상</em>
-                          <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
-                          <div class="source">
-                            <span>D조 (2022 카타르 월드컵)</span>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="card_item">
-                      <a href="/">
-                        <div class="thumb_area">
-                          <img src="./assets/img/container/thema-cast-sports-part/top_issue_4.jpeg" width="232" height="130" alt="탑 이슈 이미지1">
-                          <i class="play_icon"><span class="blind">재생</span></i>
-                          <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
-                        </div>
-                        <div class="desc_area">
-                          <em>골영상</em>
-                          <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
-                          <div class="source">
-                            <span>D조 (2022 카타르 월드컵)</span>
-                            <span class="date">1시간 전</span>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="card_item">
-                      <a href="/">
-                        <div class="thumb_area">
-                          <img src="./assets/img/container/thema-cast-sports-part/top_issue_5.jpeg" width="232" height="130" alt="탑 이슈 이미지1">
-                          <i class="play_icon"><span class="blind">재생</span></i>
-                          <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
-                        </div>
-                        <div class="desc_area">
-                          <em>골영상</em>
-                          <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
-                          <div class="source">
-                            <span>D조 (2022 카타르 월드컵)</span>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="card_item">
-                      <a href="/">
-                        <div class="thumb_area">
-                          <img src="./assets/img/container/thema-cast-sports-part/top_issue_1.jpeg" width="232" height="130" alt="탑 이슈 이미지1">
-                          <i class="play_icon"><span class="blind">재생</span></i>
-                          <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
-                        </div>
-                        <div class="desc_area">
-                          <em>골영상</em>
-                          <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
-                          <div class="source">
-                            <span>D조 (2022 카타르 월드컵)</span>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="card_item">
-                      <a href="/">
-                        <div class="thumb_area">
-                          <img src="./assets/img/container/thema-cast-sports-part/top_issue_1.jpeg" width="232" height="130" alt="탑 이슈 이미지1">
-                          <i class="play_icon"><span class="blind">재생</span></i>
-                          <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
-                        </div>
-                        <div class="desc_area">
-                          <em>골영상</em>
-                          <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
-                          <div class="source">
-                            <span>D조 (2022 카타르 월드컵)</span>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="card_item">
-                      <a href="/">
-                        <div class="thumb_area">
-                          <img src="./assets/img/container/thema-cast-sports-part/top_issue_1.jpeg" width="232" height="130" alt="탑 이슈 이미지1">
-                          <i class="play_icon"><span class="blind">재생</span></i>
-                          <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
-                        </div>
-                        <div class="desc_area">
-                          <em>골영상</em>
-                          <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
-                          <div class="source">
-                            <span>D조 (2022 카타르 월드컵)</span>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="card_item">
-                      <a href="/">
-                        <div class="thumb_area">
-                          <img src="./assets/img/container/thema-cast-sports-part/top_issue_1.jpeg" width="232" height="130" alt="탑 이슈 이미지1">
-                          <i class="play_icon"><span class="blind">재생</span></i>
-                          <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
-                        </div>
-                        <div class="desc_area">
-                          <em>골영상</em>
-                          <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
-                          <div class="source">
-                            <span>D조 (2022 카타르 월드컵)</span>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="card_item">
-                      <a href="/">
-                        <div class="thumb_area">
-                          <img src="./assets/img/container/thema-cast-sports-part/top_issue_1.jpeg" width="232" height="130" alt="탑 이슈 이미지1">
-                          <i class="play_icon"><span class="blind">재생</span></i>
-                          <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
-                        </div>
-                        <div class="desc_area">
-                          <em>골영상</em>
-                          <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
-                          <div class="source">
-                            <span>D조 (2022 카타르 월드컵)</span>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="card_item">
-                      <a href="/">
-                        <div class="thumb_area">
-                          <img src="./assets/img/container/thema-cast-sports-part/top_issue_1.jpeg" width="232" height="130" alt="탑 이슈 이미지1">
-                          <i class="play_icon"><span class="blind">재생</span></i>
-                          <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
-                        </div>
-                        <div class="desc_area">
-                          <em>골영상</em>
-                          <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
-                          <div class="source">
-                            <span>D조 (2022 카타르 월드컵)</span>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
-
-            <div class="thema_more_button">
-              <button type="button" class="button_more">
-                <i class="more_icon"></i>
-                새로운 글 더보기
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- column_right -->
-        <div class="column_right">
-          <div class="column_right_inner">
-            <div class="account_login_group">
-              <h2 class="blind">로그인</h2>
-              <p class="login_message">네이버를 더 안전하고 편리하게 이용하세요</p>
-              <a href="/" class="login_button">
-                <i></i>로그인
-              </a>
-              <div class="sub_area">
-                <div class="find_account">
-                  <a href="/">아이디</a>
-                  <a href="/">비밀번호찾기</a>
-                </div>
-                <a href="/" class="join_account">회원가입</a>
-              </div>
-            </div>
-
-            <div class="time_square">
-              <h2 class="blind">타임스퀘어</h2>
-              <div class="square_card_wrap">
-                <div class="square_card_nav">
-                  <a href="/" class="prev">
-                    <span class="blind">이전</span>
-                  </a>
-                  <a href="/" class="next">
-                    <span class="blind">다음</span>
-                  </a>
-                </div>
-                <div class="square_rolling">
-                  <a href="/" class="corona_issue">
-                    <span class="issue_badge">이슈</span>
-                    <span>코로나바이러스감염증-19 현황</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div class="right_small_banner">
-              <a href="/">
-                <img src="./assets/img/container/right-banner-image.jpg" width="700" height="400" />
-              </a>
-            </div>
-
-            <div class="trand_shop">
-              <h2 class="blind">쇼핑캐스트</h2>
-              <div class="shop_header">
-                <h1 class="link_shop">
+            <!-- 두번째 -->
+            <div class="media_view_list">
+              <div class="media_view_list_inner">
+                <div class="card_item">
                   <a href="/">
-                    트렌드쇼핑
-                  </a>
-                </h1>
-
-                <ul class="tab_title">
-                  <li><a href="/" class="active">상품</a></li>
-                  <li><a href="/">쇼핑몰</a></li>
-                  <li><a href="/">MEN</a></li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="shop_contents">
-              <div class="mall_group">
-                <h2 class="blind">몰 바로가기</h2>
-                <div class="mall_area">
-                  <a href="/" target="_blank" class="link_mall strong">
-                    쿠팡
-                  </a>
-                  <span class="mid_comma"></span>
-                  <a href="/" target="_blank" class="link_mall">
-                    G마켓
-                  </a>
-                  <span class="mid_comma"></span>
-                  <a href="/" target="_blank" class="link_mall">
-                    옥션
-                  </a>
-                  <span class="mid_comma"></span>
-                  <a href="/" target="_blank" class="link_mall strong">
-                    11번가
-                  </a>
-                  <span class="mid_comma"></span>
-                  <a href="/" target="_blank" class="link_mall">
-                    SSG닷컴
-                  </a>
-                  <span class="mid_comma"></span>
-                  <a href="/" target="_blank" class="link_mall strong">
-                    티몬
-                  </a>
-                </div>
-                <div class="mall_area">
-                  <a href="/" target="_blank" class="link_mall">
-                    올리브영
-                  </a>
-                  <span class="mid_comma interval"></span>
-                  <a href="/" target="_blank" class="link_mall strong">
-                    위메프
-                  </a>
-                  <span class="mid_comma interval"></span>
-                  <a href="/" target="_blank" class="link_mall">
-                    GS샵
-                  </a>
-                  <span class="mid_comma interval"></span>
-                  <a href="/" target="_blank" class="link_mall">
-                    CJ온스타일
-                  </a>
-                  <span class="mid_comma interval"></span>
-                  <a href="/" target="_blank" class="link_mall strong">
-                    패션플러스
-                  </a>
-                </div>
-              </div>
-
-              <!-- goods contents -->
-              <div class="goods_group">
-                <div class="shop_control">
-                  <div class="num_box">
-                    <em class="current">1</em>
-                    <span class="total">/ 18</span>
-                  </div>
-                  <div class="button_box">
-                    <a href="/" class="button prev">
-                      <span class="blind">이전</span>
-                    </a>
-                    <a href="/" class="button next">
-                      <span class="blind">다음</span>
-                    </a>
-                  </div>
-                </div>
-
-                <div class="goods_list_wrap">
-                  <ul class="goods_list">
-                    <li class="goods_card_item">
-                      <a href="/" class="list_item">
-                        <div class="thumb_box">
-                          <img src="./assets/img/container/trand-shop-goods-list/goods-list-image-1.jpg" width="107" height="146" alt="">
-                          <span class="thumb_background"></span>
-                        </div>
-                        <p class="desc_box">
-                          <span class="title strong">1년에 딱! 한번만</span>
-                          <span class="title">최대80% BIG SALE</span>
-                        </p>
-                      </a>
-                    </li>
-                    <li class="goods_card_item">
-                      <a href="/" class="list_item">
-                        <div class="thumb_box">
-                          <img src="./assets/img/container/trand-shop-goods-list/goods-list-image-2.jpg" width="107" height="146" alt="">
-                          <span class="thumb_background"></span>
-                        </div>
-                        <p class="desc_box">
-                          <span class="title strong">처음 느껴봐요!</span>
-                          <span class="title">극강의 푹신함~</span>
-                        </p>
-                      </a>
-                    </li>
-                    <li class="goods_card_item">
-                      <a href="/" class="list_item">
-                        <div class="thumb_box">
-                          <img src="./assets/img/container/trand-shop-goods-list/goods-list-image-3.jpg" width="107" height="146" alt="">
-                          <span class="thumb_background"></span>
-                        </div>
-                        <p class="desc_box">
-                          <span class="title strong">이게 뭐길래?</span>
-                          <span class="title">만든사람천재야?</span>
-                        </p>
-                      </a>
-                    </li>
-
-                    <li class="goods_card_item">
-                      <a href="/" class="list_item">
-                        <div class="thumb_box">
-                          <img src="./assets/img/container/trand-shop-goods-list/goods-list-image-4.jpg" width="107" height="146" alt="">
-                          <span class="thumb_background"></span>
-                        </div>
-                        <p class="desc_box">
-                          <span class="title strong">1년에 딱! 한번만</span>
-                          <span class="title">최대80% BIG SALE</span>
-                        </p>
-                      </a>
-                    </li>
-                    <li class="goods_card_item">
-                      <a href="/" class="list_item">
-                        <div class="thumb_box">
-                          <img src="./assets/img/container/trand-shop-goods-list/goods-list-image-5.jpg" width="107" height="146" alt="">
-                          <span class="thumb_background"></span>
-                        </div>
-                        <p class="desc_box">
-                          <span class="title strong">처음 느껴봐요!</span>
-                          <span class="title">극강의 푹신함~</span>
-                        </p>
-                      </a>
-                    </li>
-                    <li class="goods_card_item">
-                      <a href="/" class="list_item">
-                        <div class="thumb_box">
-                          <img src="./assets/img/container/trand-shop-goods-list/goods-list-image-6.jpg" width="107" height="146" alt="">
-                          <span class="thumb_background"></span>
-                        </div>
-                        <p class="desc_box">
-                          <span class="title strong">이게 뭐길래?</span>
-                          <span class="title">만든사람천재야?</span>
-                        </p>
-                      </a>
-                    </li>
-
-                    <li class="goods_card_item">
-                      <a href="/" class="list_item">
-                        <div class="thumb_box">
-                          <img src="./assets/img/container/trand-shop-goods-list/goods-list-image-7.jpg" width="107" height="146" alt="">
-                          <span class="thumb_background"></span>
-                        </div>
-                        <p class="desc_box">
-                          <span class="title strong">1년에 딱! 한번만</span>
-                          <span class="title">최대80% BIG SALE</span>
-                        </p>
-                      </a>
-                    </li>
-                    <li class="goods_card_item">
-                      <a href="/" class="list_item">
-                        <div class="thumb_box">
-                          <img src="./assets/img/container/trand-shop-goods-list/goods-list-image-8.jpg" width="107" height="146" alt="">
-                          <span class="thumb_background"></span>
-                        </div>
-                        <p class="desc_box">
-                          <span class="title strong">처음 느껴봐요!</span>
-                          <span class="title">극강의 푹신함~</span>
-                        </p>
-                      </a>
-                    </li>
-                    <li class="goods_card_item">
-                      <a href="/" class="list_item">
-                        <div class="thumb_box">
-                          <img src="./assets/img/container/trand-shop-goods-list/goods-list-image-9.jpg" width="107" height="146" alt="">
-                          <span class="thumb_background"></span>
-                        </div>
-                        <p class="desc_box">
-                          <span class="title strong">이게 뭐길래?</span>
-                          <span class="title">만든사람천재야?</span>
-                        </p>
-                      </a>
-                    </li>
-
-                    <li class="goods_card_item">
-                      <a href="/" class="list_item">
-                        <div class="thumb_box">
-                          <img src="./assets/img/container/trand-shop-goods-list/goods-list-image-10.jpg" width="107" height="146" alt="">
-                          <span class="thumb_background"></span>
-                        </div>
-                        <p class="desc_box">
-                          <span class="title strong">1년에 딱! 한번만</span>
-                          <span class="title">최대80% BIG SALE</span>
-                        </p>
-                      </a>
-                    </li>
-                    <li class="goods_card_item">
-                      <a href="/" class="list_item">
-                        <div class="thumb_box">
-                          <img src="./assets/img/container/trand-shop-goods-list/goods-list-image-11.jpg" width="107" height="146" alt="">
-                          <span class="thumb_background"></span>
-                        </div>
-                        <p class="desc_box">
-                          <span class="title strong">처음 느껴봐요!</span>
-                          <span class="title">극강의 푹신함~</span>
-                        </p>
-                      </a>
-                    </li>
-                    <li class="goods_card_item">
-                      <a href="/" class="list_item">
-                        <div class="thumb_box">
-                          <img src="./assets/img/container/trand-shop-goods-list/goods-list-image-12.jpg" width="107" height="146" alt="">
-                          <span class="thumb_background"></span>
-                        </div>
-                        <p class="desc_box">
-                          <span class="title strong">이게 뭐길래?</span>
-                          <span class="title">만든사람천재야?</span>
-                        </p>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-
-                <div class="shop_page_control">
-                  <a href="/" class="button prev"><span class="blind">이전</span></a>
-                  <div class="num_box">
-                    <em class="current strong">1</em>
-                    <span>/ 18</span>
-                  </div>
-                  <a href="/" class="button next"><span class="blind">이후</span></a>
-                </div>
-              </div>
-
-              <!-- shop event -->
-              <div class="shop_event">
-                <div class="shop_title">
-                  <strong class="strong">반갑다! 쇼핑뉴스</strong>
-                </div>
-
-                <div class="shop_control">
-                  <div class="num_box">
-                    <em class="current">1</em>
-                    <span class="total">/ 4</span>
-                  </div>
-                  <div class="button_box">
-                    <a href="/" class="button prev">
-                      <span class="blind">이전</span>
-                    </a>
-                    <a href="/" class="button next">
-                      <span class="blind">다음</span>
-                    </a>
-                  </div>
-                </div>
-
-                <ul class="evet_list">
-                  <li class="event_item">
-                    <a href="/">
-                      <em class="title">슈퍼워시</em>
-                      <span class="desc">초음파식기세척기&nbsp;20%↓파격세일</span>
-                    </a>
-                  </li>
-
-                  <li class="event_item">
-                    <a href="/">
-                      <em class="title">인더스페이스</em>
-                      <span class="desc">다용도철제선반&nbsp;겨울맞이무료배송</span>
-                    </a>
-                  </li>
-
-                  <li class="event_item">
-                    <a href="/">
-                      <em class="title">원쁠딜</em>
-                      <span class="desc">모든 상품이&nbsp;1+1인 기적</span>
-                    </a>
-                  </li>
-
-                  <li class="event_item">
-                    <a href="/">
-                      <em class="title">소소데스크</em>
-                      <span class="desc">겨울철 필수템&nbsp;저전력히터33%↓</span>
-                    </a>
-                  </li>
-
-                  <li class="event_item">
-                    <a href="/">
-                      <em class="title">슈퍼워시</em>
-                      <span class="desc">6공 다이어리&nbsp;키트 30%↓!</span>
-                    </a>
-                  </li>
-
-                  <li class="event_item">
-                    <a href="/">
-                      <em class="title">휴먼거스</em>
-                      <span class="desc">초음파식기세척기&nbsp;20%↓파격세일</span>
-                    </a>
-                  </li>
-
-                  <li class="event_item">
-                    <a href="/">
-                      <em class="title">사랑해몰</em>
-                      <span class="desc">떡갈비 선물세트&nbsp;58% SALE일</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-
-              <!-- category product group -->
-              <div class="category_product_group">
-                <ul class="category_title">
-                    <li><a href="" class="active">패션</a></li>
-                    <li><a href="">라이프</a></li>
-                    <li><a href="">뷰티</a></li>
-                    <li><a href="">디지털･레저</a></li>
-                </ul>
- 
-                <div class="shop_control">
-                  <div class="num_box">
-                    <em class="current">1</em>
-                    <span class="total">/ 18</span>
-                  </div>
-                  <div class="button_box">
-                    <a href="/" class="button prev">
-                      <span class="blind">이전</span>
-                    </a>
-                    <a href="/" class="button next">
-                      <span class="blind">다음</span>
-                    </a>
-                  </div>
-                </div>
-
-                <div class="shop_list_wrap">
-                  <ul class="goods_list">
-                    <li class="goods_card_item">
-                      <a href="/" class="list_item">
-                        <div class="thumb_box">
-                          <img src="./assets/img/container/trand-shop-goods-list/goods-list-image-1.jpg" width="163" height="163" alt="">
-                          <span class="thumb_background"></span>
-                        </div>
-                        <p class="desc_box">
-                          <span class="title strong">1년에 딱! 한번만</span>
-                        </p>
-                      </a>
-                    </li>
-                    <li class="goods_card_item">
-                      <a href="/" class="list_item">
-                        <div class="thumb_box">
-                          <img src="./assets/img/container/trand-shop-goods-list/goods-list-image-2.jpg" width="163" height="163" alt="">
-                          <span class="thumb_background"></span>
-                        </div>
-                        <p class="desc_box">
-                          <span class="title strong">처음 느껴봐요!</span>
-                        </p>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <!-- plus deal group -->
-              <div class="plus_deal_group">
-                <div class="plus_deal_title">
-                  <a href="/" class="plus_deal_icon">
-                    <span class="blind">원쁠딜</span>
-                  </a>
-                  <strong>원쁠딜 전 상품 무료배송!</strong>
-                </div>
-
-                <div class="shop_control">
-                  <div class="num_box">
-                    <em class="current">1</em>
-                    <span class="total">/ 18</span>
-                  </div>
-                  <div class="button_box">
-                    <a href="/" class="button prev">
-                      <span class="blind">이전</span>
-                    </a>
-                    <a href="/" class="button next">
-                      <span class="blind">다음</span>
-                    </a>
-                  </div>
-                </div>
-
-                <ul class="plus_deal_list">
-                  <li class="plus_deal_item">
-                    <a href="/" class="plus_deal_area">
-                      <div class="deal_thumb_box">
-                        <div class="deal_thumb">
-                          <img src="./assets/img/container/plus-deal-list/deal-item-img-1.jpg" width="85" height="60" alt="">
-                          <span class="thumb_bg"></span>
-                          <i class="deal_icon"></i>
-                        </div>
-                        <div class="deal_thumb">
-                          <img src="./assets/img/container/plus-deal-list/deal-item-img-2.jpg" width="60" height="60" alt="">
-                          <span class="thumb_bg"></span>
-                        </div>
+                    <div class="thumb_area">
+                      <img src="./assets/img/container/thema-cast-sports-part/top_issue_3.jpeg" width="232" height="130"
+                        alt="탑 이슈 이미지1">
+                      <i class="play_icon"><span class="blind">재생</span></i>
+                      <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
+                    </div>
+                    <div class="desc_area">
+                      <em>골영상</em>
+                      <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
+                      <div class="source">
+                        <span>D조 (2022 카타르 월드컵)</span>
                       </div>
-                      <div class="deal_title_box">
-                        <strong>너무따뜻한~ 프란넬 따뜻하고 가벼운 겨울털실내화 1개+1개</strong>
-                        <div class="price_wrap">
-                          <em class="discount strong">55%</em>
-                          <span class="price">8,900원</span>
-                        </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="card_item">
+                  <a href="/">
+                    <div class="thumb_area">
+                      <img src="./assets/img/container/thema-cast-sports-part/top_issue_4.jpeg" width="232" height="130"
+                        alt="탑 이슈 이미지1">
+                      <i class="play_icon"><span class="blind">재생</span></i>
+                      <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
+                    </div>
+                    <div class="desc_area">
+                      <em>골영상</em>
+                      <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
+                      <div class="source">
+                        <span>D조 (2022 카타르 월드컵)</span>
+                        <span class="date">1시간 전</span>
                       </div>
-                    </a>
-                  </li>
-
-                  <li class="plus_deal_item">
-                    <a href="/" class="plus_deal_area">
-                      <div class="deal_thumb_box">
-                        <div class="deal_thumb">
-                          <img src="./assets/img/container/plus-deal-list/deal-item-img-3.jpg" width="85" height="60" alt="">
-                          <span class="thumb_bg"></span>
-                          <i class="deal_icon"></i>
-                        </div>
-                        <div class="deal_thumb">
-                          <img src="./assets/img/container/plus-deal-list/deal-item-img-4.jpg" width="60" height="60" alt="">
-                          <span class="thumb_bg"></span>
-                        </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="card_item">
+                  <a href="/">
+                    <div class="thumb_area">
+                      <img src="./assets/img/container/thema-cast-sports-part/top_issue_5.jpeg" width="232" height="130"
+                        alt="탑 이슈 이미지1">
+                      <i class="play_icon"><span class="blind">재생</span></i>
+                      <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
+                    </div>
+                    <div class="desc_area">
+                      <em>골영상</em>
+                      <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
+                      <div class="source">
+                        <span>D조 (2022 카타르 월드컵)</span>
                       </div>
-                      <div class="deal_title_box">
-                        <strong>너무따뜻한~ 프란넬 따뜻하고 가벼운 겨울털실내화 1개+1개</strong>
-                        <div class="price_wrap">
-                          <em class="discount strong">55%</em>
-                          <span class="price">8,900원</span>
-                        </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="card_item">
+                  <a href="/">
+                    <div class="thumb_area">
+                      <img src="./assets/img/container/thema-cast-sports-part/top_issue_1.jpeg" width="232" height="130"
+                        alt="탑 이슈 이미지1">
+                      <i class="play_icon"><span class="blind">재생</span></i>
+                      <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
+                    </div>
+                    <div class="desc_area">
+                      <em>골영상</em>
+                      <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
+                      <div class="source">
+                        <span>D조 (2022 카타르 월드컵)</span>
                       </div>
-                    </a>
-                  </li>
-
-                  <li class="plus_deal_item">
-                    <a href="/" class="plus_deal_area">
-                      <div class="deal_thumb_box">
-                        <div class="deal_thumb">
-                          <img src="./assets/img/container/plus-deal-list/deal-item-img-5.jpg" width="85" height="60" alt="">
-                          <span class="thumb_bg"></span>
-                          <i class="deal_icon"></i>
-                        </div>
-                        <div class="deal_thumb">
-                          <img src="./assets/img/container/plus-deal-list/deal-item-img-6.jpg" width="60" height="60" alt="">
-                          <span class="thumb_bg"></span>
-                        </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="card_item">
+                  <a href="/">
+                    <div class="thumb_area">
+                      <img src="./assets/img/container/thema-cast-sports-part/top_issue_1.jpeg" width="232" height="130"
+                        alt="탑 이슈 이미지1">
+                      <i class="play_icon"><span class="blind">재생</span></i>
+                      <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
+                    </div>
+                    <div class="desc_area">
+                      <em>골영상</em>
+                      <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
+                      <div class="source">
+                        <span>D조 (2022 카타르 월드컵)</span>
                       </div>
-                      <div class="deal_title_box">
-                        <strong>너무따뜻한~ 프란넬 따뜻하고 가벼운 겨울털실내화 1개+1개</strong>
-                        <div class="price_wrap">
-                          <em class="discount strong">55%</em>
-                          <span class="price">8,900원</span>
-                        </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="card_item">
+                  <a href="/">
+                    <div class="thumb_area">
+                      <img src="./assets/img/container/thema-cast-sports-part/top_issue_1.jpeg" width="232" height="130"
+                        alt="탑 이슈 이미지1">
+                      <i class="play_icon"><span class="blind">재생</span></i>
+                      <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
+                    </div>
+                    <div class="desc_area">
+                      <em>골영상</em>
+                      <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
+                      <div class="source">
+                        <span>D조 (2022 카타르 월드컵)</span>
                       </div>
-                    </a>
-                  </li>
-                </ul>
+                    </div>
+                  </a>
+                </div>
+                <div class="card_item">
+                  <a href="/">
+                    <div class="thumb_area">
+                      <img src="./assets/img/container/thema-cast-sports-part/top_issue_1.jpeg" width="232" height="130"
+                        alt="탑 이슈 이미지1">
+                      <i class="play_icon"><span class="blind">재생</span></i>
+                      <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
+                    </div>
+                    <div class="desc_area">
+                      <em>골영상</em>
+                      <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
+                      <div class="source">
+                        <span>D조 (2022 카타르 월드컵)</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="card_item">
+                  <a href="/">
+                    <div class="thumb_area">
+                      <img src="./assets/img/container/thema-cast-sports-part/top_issue_1.jpeg" width="232" height="130"
+                        alt="탑 이슈 이미지1">
+                      <i class="play_icon"><span class="blind">재생</span></i>
+                      <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
+                    </div>
+                    <div class="desc_area">
+                      <em>골영상</em>
+                      <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
+                      <div class="source">
+                        <span>D조 (2022 카타르 월드컵)</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="card_item">
+                  <a href="/">
+                    <div class="thumb_area">
+                      <img src="./assets/img/container/thema-cast-sports-part/top_issue_1.jpeg" width="232" height="130"
+                        alt="탑 이슈 이미지1">
+                      <i class="play_icon"><span class="blind">재생</span></i>
+                      <span class="runtime_icon"><span class="blind play_box">재생시간</span><em>01:41</em></span>
+                    </div>
+                    <div class="desc_area">
+                      <em>골영상</em>
+                      <strong>‘해결사는 바로 나!’ 다시 달아나는 음바페의 멀티골! [KBS]</strong>
+                      <div class="source">
+                        <span>D조 (2022 카타르 월드컵)</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
+
+        <div class="thema_more_button">
+          <button type="button" class="button_more">
+            <i class="more_icon"></i>
+            새로운 글 더보기
+          </button>
+        </div>
+      </div>
     </div>
 
-    <footer role="footer">
-        <div class="footer_inner">
-            <div class="banner_area">
-              <ul class="banner_list">
-                <li class="banner_item">
-                  <a href="/" target="_blank">
-                    <div class="banner_thumb">
-                      <img src="./assets/img/footer/banner-list-img-1.jpg" width="160" height="86" alt="">
-                    </div>
-                    <div class="desc_box">
-                      <em>대한결핵협회</em>
-                      <strong>2022 크리스마스 씰</strong>
-                      <span class="desc_top">손흥민과 함께하는</span>
-                      <span>크리스마스 씰 모금</span>
-                    </div>
-                  </a>
-                </li>
-                <li class="banner_item">
-                  <a href="/" target="_blank">
-                    <div class="banner_thumb">
-                      <img src="./assets/img/footer/banner-list-img-2.jpg" width="160" height="86" alt="">
-                    </div>
-                    <div class="desc_box">
-                      <em>대한결핵협회</em>
-                      <strong>2022 크리스마스 씰</strong>
-                      <span class="desc_top">손흥민과 함께하는</span>
-                      <span>크리스마스 씰 모금</span>
-                    </div>
-                  </a>
-                </li>
-                <li class="banner_item">
-                  <a href="/" target="_blank">
-                    <div class="banner_thumb">
-                      <img src="./assets/img/footer/banner-list-img-3.jpg" width="160" height="86" alt="">
-                    </div>
-                    <div class="desc_box">
-                      <em>대한결핵협회</em>
-                      <strong>2022 크리스마스 씰</strong>
-                      <span class="desc_top">손흥민과 함께하는</span>
-                      <span>크리스마스 씰 모금</span>
-                    </div>
-                  </a>
-                </li>
-              </ul>
+    <!-- column_right -->
+    <div class="column_right">
+      <div class="column_right_inner">
+        <div class="account_login_group">
+          <h2 class="blind">로그인</h2>
+          <p class="login_message">네이버를 더 안전하고 편리하게 이용하세요</p>
+          <a href="/" class="login_button">
+            <i></i>로그인
+          </a>
+          <div class="sub_area">
+            <div class="find_account">
+              <a href="/">아이디</a>
+              <a href="/">비밀번호찾기</a>
             </div>
-
-            <div class="notice_area">
-              <h3>
-                <a href="/">공지사항</a>
-              </h3>
-
-              <a href="/" class="all_service strong">서비스 전체보기</a>
-            </div>
-
-            <div class="aside_area">
-              <div class="partner_wrap">
-                <div class="partner_box">
-                  <h3>Creators</h3>
-                  <a href="/">크리에이터</a>
-                  <a href="/">스몰비즈니스</a>
-                </div>
-
-                <div class="partner_box">
-                  <h3>Partners</h3>
-                  <a href="/">SME 풀케어 시스템</a>
-                  <a href="/">비즈니스 · 광고</a>
-                  <a href="/">스토어 개설</a>
-                  <a href="/">지역업체 등록</a>
-                  <a href="/">엑스퍼트 등록</a>
-                </div>
-
-                <div class="partner_box">
-                  <h3>Developers</h3>
-                  <a href="/">네이버 개발자 센터</a>
-                  <a href="/">오픈 API</a>
-                  <a href="/">오픈소스</a>
-                  <a href="/">네이버 D2</a>
-                  <a href="/">네이버 D2SF</a>
-                  <a href="/">네이버 랩스</a>
-                </div>
-              </div>
-
-              <div class="service_wrap">
-                <div class="service_box">
-                  <a href="/" class="service_logo">
-                    <img src="./assets/img/footer/footer-service-image-1.png" width="48" height="48" alt="웨일브라우저" />
-                  </a>
-                  <div class="service_info">
-                    <strong>웨일 브라우저</strong>
-                    <a href="/">다운받기</a>
-                  </div>
-                </div>
-                <div class="service_box">
-                  <a href="/" class="service_logo">
-                    <img src="./assets/img/footer/footer-service-image-2.png" width="47" height="50" alt="프로젝트 꽃" />
-                  </a>
-                  <div class="service_info">
-                    <strong>프로젝트 꽃</strong>
-                    <a href="/">바로가기</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="corp_area">
-              <h3 class="blind">네이버 정책 및 약관</h3>
-              <ul class="corp_list">
-                <li class="corp_item"><a href="/">회사소개</a></li>
-                <li class="corp_item"><a href="/">인재채용</a></li>
-                <li class="corp_item"><a href="/">제휴제안</a></li>
-                <li class="corp_item"><a href="/">이용약관</a></li>
-                <li class="corp_item"><a href="/">개인정보처리방침</a></li>
-                <li class="corp_item"><a href="/">청소년보호정책</a></li>
-                <li class="corp_item"><a href="/">네이버 정책</a></li>
-                <li class="corp_item"><a href="/">고객센터</a></li>
-              </ul>
-              <address class="address strong">
-                <a href="/">ⓒ NAVER Corp.</a>
-              </address>
-            </div>
+            <a href="/" class="join_account">회원가입</a>
+          </div>
         </div>
-    </footer>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
-    <script src="/assets/js/main.js"></script>
-  </body>
+        <div class="time_square">
+          <h2 class="blind">타임스퀘어</h2>
+          <div class="square_card_wrap">
+            <div class="square_card_nav">
+              <a href="/" class="prev">
+                <span class="blind">이전</span>
+              </a>
+              <a href="/" class="next">
+                <span class="blind">다음</span>
+              </a>
+            </div>
+            <div class="square_rolling">
+              <a href="/" class="corona_issue">
+                <span class="issue_badge">이슈</span>
+                <span>코로나바이러스감염증-19 현황</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="right_small_banner">
+          <a href="/">
+            <img src="./assets/img/container/right-banner-image.jpg" width="700" height="400" />
+          </a>
+        </div>
+
+        <div class="trand_shop">
+          <h2 class="blind">쇼핑캐스트</h2>
+          <div class="shop_header">
+            <h1 class="link_shop">
+              <a href="/">
+                트렌드쇼핑
+              </a>
+            </h1>
+
+            <ul class="tab_title">
+              <li><a href="/" class="active">상품</a></li>
+              <li><a href="/">쇼핑몰</a></li>
+              <li><a href="/">MEN</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="shop_contents">
+          <div class="mall_group">
+            <h2 class="blind">몰 바로가기</h2>
+            <div class="mall_area">
+              <a href="/" target="_blank" class="link_mall strong">
+                쿠팡
+              </a>
+              <span class="mid_comma"></span>
+              <a href="/" target="_blank" class="link_mall">
+                G마켓
+              </a>
+              <span class="mid_comma"></span>
+              <a href="/" target="_blank" class="link_mall">
+                옥션
+              </a>
+              <span class="mid_comma"></span>
+              <a href="/" target="_blank" class="link_mall strong">
+                11번가
+              </a>
+              <span class="mid_comma"></span>
+              <a href="/" target="_blank" class="link_mall">
+                SSG닷컴
+              </a>
+              <span class="mid_comma"></span>
+              <a href="/" target="_blank" class="link_mall strong">
+                티몬
+              </a>
+            </div>
+            <div class="mall_area">
+              <a href="/" target="_blank" class="link_mall">
+                올리브영
+              </a>
+              <span class="mid_comma interval"></span>
+              <a href="/" target="_blank" class="link_mall strong">
+                위메프
+              </a>
+              <span class="mid_comma interval"></span>
+              <a href="/" target="_blank" class="link_mall">
+                GS샵
+              </a>
+              <span class="mid_comma interval"></span>
+              <a href="/" target="_blank" class="link_mall">
+                CJ온스타일
+              </a>
+              <span class="mid_comma interval"></span>
+              <a href="/" target="_blank" class="link_mall strong">
+                패션플러스
+              </a>
+            </div>
+          </div>
+
+          <!-- goods contents -->
+          <div class="goods_group">
+            <div class="shop_control">
+              <div class="num_box">
+                <em class="current">1</em>
+                <span class="total">/ 18</span>
+              </div>
+              <div class="button_box">
+                <a href="/" class="button prev">
+                  <span class="blind">이전</span>
+                </a>
+                <a href="/" class="button next">
+                  <span class="blind">다음</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="goods_list_wrap">
+              <ul class="goods_list">
+                <li class="goods_card_item">
+                  <a href="/" class="list_item">
+                    <div class="thumb_box">
+                      <img src="./assets/img/container/trand-shop-goods-list/goods-list-image-1.jpg" width="107"
+                        height="146" alt="">
+                      <span class="thumb_background"></span>
+                    </div>
+                    <p class="desc_box">
+                      <span class="title strong">1년에 딱! 한번만</span>
+                      <span class="title">최대80% BIG SALE</span>
+                    </p>
+                  </a>
+                </li>
+                <li class="goods_card_item">
+                  <a href="/" class="list_item">
+                    <div class="thumb_box">
+                      <img src="./assets/img/container/trand-shop-goods-list/goods-list-image-2.jpg" width="107"
+                        height="146" alt="">
+                      <span class="thumb_background"></span>
+                    </div>
+                    <p class="desc_box">
+                      <span class="title strong">처음 느껴봐요!</span>
+                      <span class="title">극강의 푹신함~</span>
+                    </p>
+                  </a>
+                </li>
+                <li class="goods_card_item">
+                  <a href="/" class="list_item">
+                    <div class="thumb_box">
+                      <img src="./assets/img/container/trand-shop-goods-list/goods-list-image-3.jpg" width="107"
+                        height="146" alt="">
+                      <span class="thumb_background"></span>
+                    </div>
+                    <p class="desc_box">
+                      <span class="title strong">이게 뭐길래?</span>
+                      <span class="title">만든사람천재야?</span>
+                    </p>
+                  </a>
+                </li>
+
+                <li class="goods_card_item">
+                  <a href="/" class="list_item">
+                    <div class="thumb_box">
+                      <img src="./assets/img/container/trand-shop-goods-list/goods-list-image-4.jpg" width="107"
+                        height="146" alt="">
+                      <span class="thumb_background"></span>
+                    </div>
+                    <p class="desc_box">
+                      <span class="title strong">1년에 딱! 한번만</span>
+                      <span class="title">최대80% BIG SALE</span>
+                    </p>
+                  </a>
+                </li>
+                <li class="goods_card_item">
+                  <a href="/" class="list_item">
+                    <div class="thumb_box">
+                      <img src="./assets/img/container/trand-shop-goods-list/goods-list-image-5.jpg" width="107"
+                        height="146" alt="">
+                      <span class="thumb_background"></span>
+                    </div>
+                    <p class="desc_box">
+                      <span class="title strong">처음 느껴봐요!</span>
+                      <span class="title">극강의 푹신함~</span>
+                    </p>
+                  </a>
+                </li>
+                <li class="goods_card_item">
+                  <a href="/" class="list_item">
+                    <div class="thumb_box">
+                      <img src="./assets/img/container/trand-shop-goods-list/goods-list-image-6.jpg" width="107"
+                        height="146" alt="">
+                      <span class="thumb_background"></span>
+                    </div>
+                    <p class="desc_box">
+                      <span class="title strong">이게 뭐길래?</span>
+                      <span class="title">만든사람천재야?</span>
+                    </p>
+                  </a>
+                </li>
+
+                <li class="goods_card_item">
+                  <a href="/" class="list_item">
+                    <div class="thumb_box">
+                      <img src="./assets/img/container/trand-shop-goods-list/goods-list-image-7.jpg" width="107"
+                        height="146" alt="">
+                      <span class="thumb_background"></span>
+                    </div>
+                    <p class="desc_box">
+                      <span class="title strong">1년에 딱! 한번만</span>
+                      <span class="title">최대80% BIG SALE</span>
+                    </p>
+                  </a>
+                </li>
+                <li class="goods_card_item">
+                  <a href="/" class="list_item">
+                    <div class="thumb_box">
+                      <img src="./assets/img/container/trand-shop-goods-list/goods-list-image-8.jpg" width="107"
+                        height="146" alt="">
+                      <span class="thumb_background"></span>
+                    </div>
+                    <p class="desc_box">
+                      <span class="title strong">처음 느껴봐요!</span>
+                      <span class="title">극강의 푹신함~</span>
+                    </p>
+                  </a>
+                </li>
+                <li class="goods_card_item">
+                  <a href="/" class="list_item">
+                    <div class="thumb_box">
+                      <img src="./assets/img/container/trand-shop-goods-list/goods-list-image-9.jpg" width="107"
+                        height="146" alt="">
+                      <span class="thumb_background"></span>
+                    </div>
+                    <p class="desc_box">
+                      <span class="title strong">이게 뭐길래?</span>
+                      <span class="title">만든사람천재야?</span>
+                    </p>
+                  </a>
+                </li>
+
+                <li class="goods_card_item">
+                  <a href="/" class="list_item">
+                    <div class="thumb_box">
+                      <img src="./assets/img/container/trand-shop-goods-list/goods-list-image-10.jpg" width="107"
+                        height="146" alt="">
+                      <span class="thumb_background"></span>
+                    </div>
+                    <p class="desc_box">
+                      <span class="title strong">1년에 딱! 한번만</span>
+                      <span class="title">최대80% BIG SALE</span>
+                    </p>
+                  </a>
+                </li>
+                <li class="goods_card_item">
+                  <a href="/" class="list_item">
+                    <div class="thumb_box">
+                      <img src="./assets/img/container/trand-shop-goods-list/goods-list-image-11.jpg" width="107"
+                        height="146" alt="">
+                      <span class="thumb_background"></span>
+                    </div>
+                    <p class="desc_box">
+                      <span class="title strong">처음 느껴봐요!</span>
+                      <span class="title">극강의 푹신함~</span>
+                    </p>
+                  </a>
+                </li>
+                <li class="goods_card_item">
+                  <a href="/" class="list_item">
+                    <div class="thumb_box">
+                      <img src="./assets/img/container/trand-shop-goods-list/goods-list-image-12.jpg" width="107"
+                        height="146" alt="">
+                      <span class="thumb_background"></span>
+                    </div>
+                    <p class="desc_box">
+                      <span class="title strong">이게 뭐길래?</span>
+                      <span class="title">만든사람천재야?</span>
+                    </p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="shop_page_control">
+              <a href="/" class="button prev"><span class="blind">이전</span></a>
+              <div class="num_box">
+                <em class="current strong">1</em>
+                <span>/ 18</span>
+              </div>
+              <a href="/" class="button next"><span class="blind">이후</span></a>
+            </div>
+          </div>
+
+          <!-- shop event -->
+          <div class="shop_event">
+            <div class="shop_title">
+              <strong class="strong">반갑다! 쇼핑뉴스</strong>
+            </div>
+
+            <div class="shop_control">
+              <div class="num_box">
+                <em class="current">1</em>
+                <span class="total">/ 4</span>
+              </div>
+              <div class="button_box">
+                <a href="/" class="button prev">
+                  <span class="blind">이전</span>
+                </a>
+                <a href="/" class="button next">
+                  <span class="blind">다음</span>
+                </a>
+              </div>
+            </div>
+
+            <ul class="evet_list">
+              <li class="event_item">
+                <a href="/">
+                  <em class="title">슈퍼워시</em>
+                  <span class="desc">초음파식기세척기&nbsp;20%↓파격세일</span>
+                </a>
+              </li>
+
+              <li class="event_item">
+                <a href="/">
+                  <em class="title">인더스페이스</em>
+                  <span class="desc">다용도철제선반&nbsp;겨울맞이무료배송</span>
+                </a>
+              </li>
+
+              <li class="event_item">
+                <a href="/">
+                  <em class="title">원쁠딜</em>
+                  <span class="desc">모든 상품이&nbsp;1+1인 기적</span>
+                </a>
+              </li>
+
+              <li class="event_item">
+                <a href="/">
+                  <em class="title">소소데스크</em>
+                  <span class="desc">겨울철 필수템&nbsp;저전력히터33%↓</span>
+                </a>
+              </li>
+
+              <li class="event_item">
+                <a href="/">
+                  <em class="title">슈퍼워시</em>
+                  <span class="desc">6공 다이어리&nbsp;키트 30%↓!</span>
+                </a>
+              </li>
+
+              <li class="event_item">
+                <a href="/">
+                  <em class="title">휴먼거스</em>
+                  <span class="desc">초음파식기세척기&nbsp;20%↓파격세일</span>
+                </a>
+              </li>
+
+              <li class="event_item">
+                <a href="/">
+                  <em class="title">사랑해몰</em>
+                  <span class="desc">떡갈비 선물세트&nbsp;58% SALE일</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- category product group -->
+          <div class="category_product_group">
+            <ul class="category_title">
+              <li><a href="" class="active">패션</a></li>
+              <li><a href="">라이프</a></li>
+              <li><a href="">뷰티</a></li>
+              <li><a href="">디지털･레저</a></li>
+            </ul>
+
+            <div class="shop_control">
+              <div class="num_box">
+                <em class="current">1</em>
+                <span class="total">/ 18</span>
+              </div>
+              <div class="button_box">
+                <a href="/" class="button prev">
+                  <span class="blind">이전</span>
+                </a>
+                <a href="/" class="button next">
+                  <span class="blind">다음</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="shop_list_wrap">
+              <ul class="goods_list">
+                <li class="goods_card_item">
+                  <a href="/" class="list_item">
+                    <div class="thumb_box">
+                      <img src="./assets/img/container/trand-shop-goods-list/goods-list-image-1.jpg" width="163"
+                        height="163" alt="">
+                      <span class="thumb_background"></span>
+                    </div>
+                    <p class="desc_box">
+                      <span class="title strong">1년에 딱! 한번만</span>
+                    </p>
+                  </a>
+                </li>
+                <li class="goods_card_item">
+                  <a href="/" class="list_item">
+                    <div class="thumb_box">
+                      <img src="./assets/img/container/trand-shop-goods-list/goods-list-image-2.jpg" width="163"
+                        height="163" alt="">
+                      <span class="thumb_background"></span>
+                    </div>
+                    <p class="desc_box">
+                      <span class="title strong">처음 느껴봐요!</span>
+                    </p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- plus deal group -->
+          <div class="plus_deal_group">
+            <div class="plus_deal_title">
+              <a href="/" class="plus_deal_icon">
+                <span class="blind">원쁠딜</span>
+              </a>
+              <strong>원쁠딜 전 상품 무료배송!</strong>
+            </div>
+
+            <div class="shop_control">
+              <div class="num_box">
+                <em class="current">1</em>
+                <span class="total">/ 18</span>
+              </div>
+              <div class="button_box">
+                <a href="/" class="button prev">
+                  <span class="blind">이전</span>
+                </a>
+                <a href="/" class="button next">
+                  <span class="blind">다음</span>
+                </a>
+              </div>
+            </div>
+
+            <ul class="plus_deal_list">
+              <li class="plus_deal_item">
+                <a href="/" class="plus_deal_area">
+                  <div class="deal_thumb_box">
+                    <div class="deal_thumb">
+                      <img src="./assets/img/container/plus-deal-list/deal-item-img-1.jpg" width="85" height="60"
+                        alt="">
+                      <span class="thumb_bg"></span>
+                      <i class="deal_icon"></i>
+                    </div>
+                    <div class="deal_thumb">
+                      <img src="./assets/img/container/plus-deal-list/deal-item-img-2.jpg" width="60" height="60"
+                        alt="">
+                      <span class="thumb_bg"></span>
+                    </div>
+                  </div>
+                  <div class="deal_title_box">
+                    <strong>너무따뜻한~ 프란넬 따뜻하고 가벼운 겨울털실내화 1개+1개</strong>
+                    <div class="price_wrap">
+                      <em class="discount strong">55%</em>
+                      <span class="price">8,900원</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+
+              <li class="plus_deal_item">
+                <a href="/" class="plus_deal_area">
+                  <div class="deal_thumb_box">
+                    <div class="deal_thumb">
+                      <img src="./assets/img/container/plus-deal-list/deal-item-img-3.jpg" width="85" height="60"
+                        alt="">
+                      <span class="thumb_bg"></span>
+                      <i class="deal_icon"></i>
+                    </div>
+                    <div class="deal_thumb">
+                      <img src="./assets/img/container/plus-deal-list/deal-item-img-4.jpg" width="60" height="60"
+                        alt="">
+                      <span class="thumb_bg"></span>
+                    </div>
+                  </div>
+                  <div class="deal_title_box">
+                    <strong>너무따뜻한~ 프란넬 따뜻하고 가벼운 겨울털실내화 1개+1개</strong>
+                    <div class="price_wrap">
+                      <em class="discount strong">55%</em>
+                      <span class="price">8,900원</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+
+              <li class="plus_deal_item">
+                <a href="/" class="plus_deal_area">
+                  <div class="deal_thumb_box">
+                    <div class="deal_thumb">
+                      <img src="./assets/img/container/plus-deal-list/deal-item-img-5.jpg" width="85" height="60"
+                        alt="">
+                      <span class="thumb_bg"></span>
+                      <i class="deal_icon"></i>
+                    </div>
+                    <div class="deal_thumb">
+                      <img src="./assets/img/container/plus-deal-list/deal-item-img-6.jpg" width="60" height="60"
+                        alt="">
+                      <span class="thumb_bg"></span>
+                    </div>
+                  </div>
+                  <div class="deal_title_box">
+                    <strong>너무따뜻한~ 프란넬 따뜻하고 가벼운 겨울털실내화 1개+1개</strong>
+                    <div class="price_wrap">
+                      <em class="discount strong">55%</em>
+                      <span class="price">8,900원</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer role="footer">
+    <div class="footer_inner">
+      <div class="banner_area">
+        <ul class="banner_list">
+          <li class="banner_item">
+            <a href="/" target="_blank">
+              <div class="banner_thumb">
+                <img src="./assets/img/footer/banner-list-img-1.jpg" width="160" height="86" alt="">
+              </div>
+              <div class="desc_box">
+                <em>대한결핵협회</em>
+                <strong>2022 크리스마스 씰</strong>
+                <span class="desc_top">손흥민과 함께하는</span>
+                <span>크리스마스 씰 모금</span>
+              </div>
+            </a>
+          </li>
+          <li class="banner_item">
+            <a href="/" target="_blank">
+              <div class="banner_thumb">
+                <img src="./assets/img/footer/banner-list-img-2.jpg" width="160" height="86" alt="">
+              </div>
+              <div class="desc_box">
+                <em>대한결핵협회</em>
+                <strong>2022 크리스마스 씰</strong>
+                <span class="desc_top">손흥민과 함께하는</span>
+                <span>크리스마스 씰 모금</span>
+              </div>
+            </a>
+          </li>
+          <li class="banner_item">
+            <a href="/" target="_blank">
+              <div class="banner_thumb">
+                <img src="./assets/img/footer/banner-list-img-3.jpg" width="160" height="86" alt="">
+              </div>
+              <div class="desc_box">
+                <em>대한결핵협회</em>
+                <strong>2022 크리스마스 씰</strong>
+                <span class="desc_top">손흥민과 함께하는</span>
+                <span>크리스마스 씰 모금</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="notice_area">
+        <h3>
+          <a href="/">공지사항</a>
+        </h3>
+
+        <a href="/" class="all_service strong">서비스 전체보기</a>
+      </div>
+
+      <div class="aside_area">
+        <div class="partner_wrap">
+          <div class="partner_box">
+            <h3>Creators</h3>
+            <a href="/">크리에이터</a>
+            <a href="/">스몰비즈니스</a>
+          </div>
+
+          <div class="partner_box">
+            <h3>Partners</h3>
+            <a href="/">SME 풀케어 시스템</a>
+            <a href="/">비즈니스 · 광고</a>
+            <a href="/">스토어 개설</a>
+            <a href="/">지역업체 등록</a>
+            <a href="/">엑스퍼트 등록</a>
+          </div>
+
+          <div class="partner_box">
+            <h3>Developers</h3>
+            <a href="/">네이버 개발자 센터</a>
+            <a href="/">오픈 API</a>
+            <a href="/">오픈소스</a>
+            <a href="/">네이버 D2</a>
+            <a href="/">네이버 D2SF</a>
+            <a href="/">네이버 랩스</a>
+          </div>
+        </div>
+
+        <div class="service_wrap">
+          <div class="service_box">
+            <a href="/" class="service_logo">
+              <img src="./assets/img/footer/footer-service-image-1.png" width="48" height="48" alt="웨일브라우저" />
+            </a>
+            <div class="service_info">
+              <strong>웨일 브라우저</strong>
+              <a href="/">다운받기</a>
+            </div>
+          </div>
+          <div class="service_box">
+            <a href="/" class="service_logo">
+              <img src="./assets/img/footer/footer-service-image-2.png" width="47" height="50" alt="프로젝트 꽃" />
+            </a>
+            <div class="service_info">
+              <strong>프로젝트 꽃</strong>
+              <a href="/">바로가기</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="corp_area">
+        <h3 class="blind">네이버 정책 및 약관</h3>
+        <ul class="corp_list">
+          <li class="corp_item"><a href="/">회사소개</a></li>
+          <li class="corp_item"><a href="/">인재채용</a></li>
+          <li class="corp_item"><a href="/">제휴제안</a></li>
+          <li class="corp_item"><a href="/">이용약관</a></li>
+          <li class="corp_item"><a href="/">개인정보처리방침</a></li>
+          <li class="corp_item"><a href="/">청소년보호정책</a></li>
+          <li class="corp_item"><a href="/">네이버 정책</a></li>
+          <li class="corp_item"><a href="/">고객센터</a></li>
+        </ul>
+        <address class="address strong">
+          <a href="/">ⓒ NAVER Corp.</a>
+        </address>
+      </div>
+    </div>
+  </footer>
+</body>
+
 </html>

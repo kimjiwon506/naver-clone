@@ -26,3 +26,135 @@
 .strong {
   font-weight: 700;
 }
+
+/* card-item */
+.card_item .thumb_area {
+  overflow: hidden;
+  display: inline-block;
+  position: relative;
+  line-height: 0;
+  vertical-align: bottom;
+}
+
+.card_item a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.card_item .thumb_area:hover img {
+  transform: scale(1.08);
+  transition: 0.2s;
+}
+
+.card_item .thumb_background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.1;
+  background-color: #000;
+}
+
+.card_item .desc_area {
+  display: block;
+  padding: 16px 18px 0 0;
+  text-decoration: none;
+}
+
+.card_item .desc_area em {
+  display: block;
+  color: #0147b5;
+  font-weight: bold;
+}
+
+.card_item .desc_area strong {
+  display: block;
+  overflow: hidden;
+  max-height: 44px;
+  line-height: 22px;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  margin-top: 3px;
+  white-space: normal;
+  font-size: 13px;
+}
+
+.card_item .desc_area strong:hover {
+  text-decoration: underline;
+}
+
+.card_item .desc_area .source {
+  display: inline-block;
+  overflow: hidden;
+  max-width: 100%;
+  margin-top: 4px;
+  line-height: 20px;
+}
+
+.card_item .desc_area .source .date {
+  float: right;
+  color: grey;
+}
+
+.card_item .desc_area .source .date::before {
+  background-color: grey;
+  display: inline-block;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  vertical-align: top;
+  content: "";
+  margin: 0 5px;
+  vertical-align: 3px;
+}
+
+.card_item .play_icon {
+  position: absolute;
+  bottom: 9px;
+  left: 12px;
+  display: inline-block;
+  width: 24px;
+  height: 28px;
+  background-position: -246px -342px;
+  background-repeat: no-repeat;
+  vertical-align: top;
+  background-image: url(../img/container/container-image.png);
+  background-size: 442px 428px;
+  z-index: 1;
+}
+
+.card_item .runtime_icon {
+  display: block;
+  position: absolute;
+  bottom: 8px;
+  right: 10px;
+  padding: 3px 6px;
+  font-size: 12px;
+  line-height: 14px;
+  background-color: #000;
+  color: white;
+  border-radius: 2px;
+  opacity: 0.7;
+  z-index: 1;
+}
+
+.card_item .runtime_icon .play_box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+  background-color: #000;
+  border-radius: 2px;
+  color: transparent;
+}
+
+.card_item .runtime_icon em {
+  position: relative;
+  z-index: 1;
+}
+/* //card-item */
