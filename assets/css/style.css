@@ -1119,6 +1119,21 @@ header {
   position: relative;
 }
 
+.thema_category .category_box_wrap {
+  overflow: hidden;
+  width: 750px;
+  border: 1px solid #e4e8eb;
+  box-sizing: border-box;
+}
+
+.category_box_wrap .thema_slider_nav {
+  width: 937.5px;
+}
+
+.category_box_wrap .thema_slider_nav .item {
+  border-right: 1px solid #e4e8eb;
+}
+
 .thema_category .arrow_button {
   display: inline-block;
   width: 40px;
@@ -1151,10 +1166,7 @@ header {
 .category_box {
   font-size: 0;
   line-height: 0;
-}
-
-.categort_wrap {
-  width: 940px;
+  /* border: 1px solid #dae1e6; */
 }
 
 .category_box::after {
@@ -1166,7 +1178,8 @@ header {
 
 .category_box .item {
   float: left;
-  width: 93px;
+  width: 93.75px;
+  box-sizing: border-box;
   height: 49px;
   text-align: center;
   line-height: 49px;
@@ -1175,7 +1188,6 @@ header {
 
 .category_box .item a {
   display: block;
-  /* border-right: 1px solid #dae1e6; */
   font-size: 13px;
   line-height: 49px;
   font-weight: 700;
@@ -1193,14 +1205,14 @@ header {
   vertical-align: 4px;
 }
 /* 카테고리 아이템 의 a 에 active 되었을 경우 색상 바뀌도록 */
-/* .category_box .item a.active {
-  background-color: #0147b5;
-  color: #fff;
-} */
-.category_box .slick-slide.slick-current a {
+.category_box .item a.active {
   background-color: #0147b5;
   color: #fff;
 }
+/* .category_box .slick-slide.slick-current a {
+  background-color: #0147b5;
+  color: #fff;
+} */
 
 .thema_cast_contents {
   padding-top: 4px;
