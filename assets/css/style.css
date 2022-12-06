@@ -1204,15 +1204,58 @@ header {
   border-radius: 50%;
   vertical-align: 4px;
 }
+
 /* 카테고리 아이템 의 a 에 active 되었을 경우 색상 바뀌도록 */
-.category_box .item a.active {
-  background-color: #0147b5;
+.category_box .enter a.active {
+  background-color: #e65da0;
   color: #fff;
+  box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%);
 }
-/* .category_box .slick-slide.slick-current a {
+.category_box .sports a.active {
   background-color: #0147b5;
   color: #fff;
-} */
+  box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%);
+}
+.category_box .car a.active {
+  background-color: #4a94e1;
+  color: #fff;
+  box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%);
+}
+.category_box .webtoon a.active {
+  background-color: #66c971;
+  color: #fff;
+  box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%);
+}
+.category_box .economic a.active {
+  background-color: #35ae5e;
+  color: #fff;
+  box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%);
+}
+.category_box .recommend a.active {
+  background-color: #5290ff;
+  color: #fff;
+  box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%);
+}
+.category_box .recipe a.active {
+  background-color: #ebaa00;
+  color: #fff;
+  box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%);
+}
+.category_box .living a.active {
+  background-color: #c08d31;
+  color: #fff;
+  box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%);
+}
+.category_box .book a.active {
+  background-color: #42be6f;
+  color: #fff;
+  box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%);
+}
+.category_box .fashion a.active {
+  background-color: #8449ca;
+  color: #fff;
+  box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%);
+}
 
 .thema_cast_contents {
   padding-top: 4px;

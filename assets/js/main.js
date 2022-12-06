@@ -109,8 +109,7 @@ $(document).ready(function () {
     }
     if (nextIndex === 8) {
       $(".thema_slider_nav").animate({ marginLeft: -leftWidth }, 300);
-    }
-    if (prevIndex === 2) {
+    } else if (prevIndex === 2) {
       $(".thema_slider_nav").animate({ marginLeft: 0 }, 300);
     }
 
@@ -135,10 +134,10 @@ $(document).ready(function () {
       .addClass("active");
 
     $(`.thema_slider_contents_wrap > div:eq(${currentIndex})`).show();
-    if ($(this).index() === 7) {
+    if (currentIndex === 7) {
       $(".thema_slider_nav").animate({ marginLeft: -leftWidth }, 300);
     }
-    if ($(this).index() === 2) {
+    if (currentIndex === 2) {
       $(".thema_slider_nav").animate({ marginLeft: 0 }, 300);
     }
 
