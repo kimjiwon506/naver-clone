@@ -86,7 +86,6 @@ $(document).ready(function () {
         tabindex: "0",
         "aria-selected": "true",
       })
-      .focus()
       .siblings()
       .attr({
         tabindex: "-1",
@@ -106,6 +105,19 @@ $(document).ready(function () {
     currentIndex = $(this).index();
   });
 
+  $(".thema_category.prev_button").hide();
+
+  function showArrow() {
+    if (currentIndex === 0) {
+      $(".thema_category.prev_button").hide();
+    } else if (currentIndex + 1 === totalItem) {
+      $(".thema_category.next_button").hide();
+    } else {
+      $(".thema_category.next_button").show();
+      $(".thema_category.prev_button").show();
+    }
+  }
+
   // 화살표 버튼 클릭시 이동
   function moveTab(index) {
     currentIndex = index;
@@ -116,7 +128,6 @@ $(document).ready(function () {
         tabindex: "0",
         "aria-selected": "true",
       })
-      .focus()
       .siblings()
       .attr({
         tabindex: "-1",
@@ -128,6 +139,7 @@ $(document).ready(function () {
       .siblings(".tabpanel")
       .attr("tabindex", "-1")
       .removeClass("active");
+    showArrow();
   }
 
   arrowButton.on("click", function (e) {
