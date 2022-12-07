@@ -1,6 +1,6 @@
 $(document).ready(function () {
   // 탑배너
-  const topBanner = $(".close_button");
+  topBanner = $(".close_button");
 
   topBanner.click(function () {
     $(".top_banner").hide();
@@ -35,7 +35,7 @@ $(document).ready(function () {
     $(".weather_group").eq(newIndex).show();
   }
 
-  // 뉴스스탠드 슬라이더
+  // // 뉴스스탠드 슬라이더
   const newsStandSlider = $(".news_stand_slider_wrap").slick({
     fade: true,
     autoplay: true,
@@ -64,83 +64,98 @@ $(document).ready(function () {
   });
 
   // 오늘 읽을만한 글
-  const themaArrowBtn = $(".thema_category .arrow_button");
-  const themaTabItem = $(".thema_category .item");
-  const themaTabCount = themaTabItem.length;
-  const leftWidth =
-    $(".thema_slider_nav").outerWidth() - $(".category_box_wrap").outerWidth();
+  const item = $(".tab_list li");
+  const arrowButton = $(".thema_category.arrow_button");
+  const totalItem = item.length;
+  const totalWidth = totalItem * item.outerWidth();
 
   let currentIndex = 0;
 
-  $(".thema_category.left_button").hide();
+  // 탭 클릭시 컨텐츠와 함께 보여짐
+  $(".tab:first-of-type, .tabpanel:first-of-type")
+    .addClass("active")
+    .attr("tabindex", "0");
 
-  function moveTab(index) {
-    currentIndex = index;
-    themaTabItem
+  $(".tab:first-of-type").attr("aria-selected", "true");
+
+  $(".tab").on("click", function (e) {
+    e.preventDefault();
+    $(this).find("a").addClass("active");
+    $(this)
+      .attr({
+        tabindex: "0",
+        "aria-selected": "true",
+      })
+      .focus()
+      .siblings()
+      .attr({
+        tabindex: "-1",
+        "aria-selected": "false",
+      })
       .find("a")
-      .removeClass("active")
-      .eq(currentIndex)
-      .addClass("active");
-    showArrow();
-  }
+      .removeClass("active");
 
-  function showArrow() {
-    if (currentIndex === 0) {
-      $(".thema_category.left_button").hide();
-    } else if (currentIndex + 1 === themaTabCount) {
-      $(".thema_category.right_button").hide();
-    } else {
-      $(".thema_category.right_button").show();
-      $(".thema_category.left_button").show();
-    }
-  }
-
-  themaArrowBtn.on("click", function (e) {
-    e.preventDefault();
-
-    // tab arrow 버튼 active, slide움직임
-    let nextIndex = currentIndex + 1;
-    let prevIndex = currentIndex - 1;
-
-    if ($(this).hasClass("left_button")) {
-      moveTab(prevIndex);
-    } else {
-      moveTab(nextIndex);
-    }
-    if (nextIndex === 8) {
-      $(".thema_slider_nav").animate({ marginLeft: -leftWidth }, 300);
-    } else if (prevIndex === 2) {
-      $(".thema_slider_nav").animate({ marginLeft: 0 }, 300);
-    }
-
-    //tab 버튼에 따라 해당 내용이 보이도록
-    $(`.thema_slider_contents_wrap > div`).hide();
-    if ($(`.thema_slider_nav li:eq(${currentIndex})`)) {
-      $(`.thema_slider_contents_wrap > div:eq(${currentIndex})`).show();
-    }
-  });
-
-  themaTabItem.on("click", function (e) {
-    e.preventDefault();
-
-    $(`.thema_slider_contents_wrap > div`).hide();
+    // 연관된 탭 패널 활성화
+    $("#" + $(this).attr("aria-controls"))
+      .attr("tabindex", "0")
+      .addClass("active")
+      .siblings(".tabpanel")
+      .attr("tabindex", "-1")
+      .removeClass("active");
 
     currentIndex = $(this).index();
-
-    $(".thema_slider_nav li")
-      .find("a")
-      .removeClass("active")
-      .eq(currentIndex)
-      .addClass("active");
-
-    $(`.thema_slider_contents_wrap > div:eq(${currentIndex})`).show();
-    if (currentIndex === 7) {
-      $(".thema_slider_nav").animate({ marginLeft: -leftWidth }, 300);
-    }
-    if (currentIndex === 2) {
-      $(".thema_slider_nav").animate({ marginLeft: 0 }, 300);
-    }
-
-    showArrow();
   });
+
+  // 화살표 버튼 클릭시 이동
+  function moveTab(index) {
+    currentIndex = index;
+    item.find("a").removeClass("active").eq(currentIndex).addClass("active");
+    item
+      .eq(currentIndex)
+      .attr({
+        tabindex: "0",
+        "aria-selected": "true",
+      })
+      .focus()
+      .siblings()
+      .attr({
+        tabindex: "-1",
+        "aria-selected": "false",
+      });
+    $("#" + item.eq(currentIndex).attr("aria-controls"))
+      .attr("tabindex", "0")
+      .addClass("active")
+      .siblings(".tabpanel")
+      .attr("tabindex", "-1")
+      .removeClass("active");
+  }
+
+  arrowButton.on("click", function (e) {
+    e.preventDefault();
+    let nextIndex = (currentIndex + 1) % totalItem;
+    let prevIndex = (currentIndex - 1) % totalItem;
+
+    let tabListWidth = $(".tab_list").outerWidth();
+    let indexItemWidth = item.eq(currentIndex).position().left;
+    let leftItemWidth = $(".tab_list").outerWidth() - item.outerWidth() * 2;
+
+    if ($(this).hasClass("next_button") && indexItemWidth === leftItemWidth) {
+      $(".tab_list").css({
+        transform: "translateX(" + -(totalWidth - tabListWidth) + "px)",
+      });
+    }
+    if ($(this).hasClass("prev_button") && indexItemWidth === 0) {
+      $(".tab_list").css({
+        transform: "translateX(0px)",
+      });
+    }
+
+    if ($(this).hasClass("next_button")) {
+      moveTab(nextIndex);
+    } else {
+      moveTab(prevIndex);
+    }
+  });
+
+  // 트렌드쇼핑
 });

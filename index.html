@@ -947,30 +947,31 @@
 
         <div class="thema_category">
           <div class="category_box_wrap">
-            <ul class="category_box thema_slider_nav">
-              <li class="item enter"><a href="/" class="active">엔터</a></li>
-              <li class="item sports"><a href="/">스포츠</a></li>
-              <li class="item car"><a href="/">자동차</a></li>
-              <li class="item webtoon"><a href="/">웹툰</a></li>
-              <li class="item economic"><a href="/">경제</a></li>
-              <li class="item recommend"><a href="/">추천<span class="ico_middot"></span>구독</a></li>
-              <li class="item recipe"><a href="/">레시피</a></li>
-              <li class="item living"><a href="/">리빙</a></li>
-              <li class="item book"><a href="/">책방</a></li>
-              <li class="item fashion"><a href="/">패션뷰티</a></li>
+            <ul class=" tab_list" role="tablist">
+              <li id="tab1" class="enter tab" aria-controls="tab-panel1"><a href="/" class="active">엔터</a></li>
+              <li id="tab2" class="sports tab" aria-controls="tab-panel2"><a href="/">스포츠</a></li>
+              <li id="tab3" class="car tab" aria-controls="tab-panel3"><a href="/">자동차</a></li>
+              <li id="tab4" class="webtoon tab" aria-controls="tab-panel4"><a href="/">웹툰</a></li>
+              <li id="tab5" class="economic tab" aria-controls="tab-panel5"><a href="/">경제</a></li>
+              <li id="tab6" class="recommend tab" aria-controls="tab-panel6"><a href="/">추천<span
+                    class="ico_middot"></span>구독</a></li>
+              <li id="tab7" class="recipe tab" aria-controls="tab-panel7"><a href="/">레시피</a></li>
+              <li id="tab8" class="living tab" aria-controls="tab-panel8"><a href="/">리빙</a></li>
+              <li id="tab9" class="book tab" aria-controls="tab-panel9"><a href="/">책방</a></li>
+              <li id="tab10" class="fashion tab" aria-controls="tab-panel10"><a href="/">패션뷰티</a></li>
             </ul>
           </div>
 
-          <a href="/" class="thema_category arrow_button left_button">
+          <a href="/" class="thema_category arrow_button prev_button">
             <i><span class="blind">이전버튼</span></i>
           </a>
-          <a href="/" class="thema_category arrow_button right_button">
+          <a href="/" class="thema_category arrow_button next_button">
             <i><span class="blind">다음버튼</span></i>
           </a>
         </div>
 
         <div class="thema_slider_contents_wrap">
-          <div class="contents contents1">
+          <div id="tab-panel1" class="contents tabpanel" role="tabpanel" aria-labelledby="tab1">
             <span>엔터</span>
             <div class="thema_cast_contents">
               <div class="banner_world_cup">
@@ -1361,31 +1362,31 @@
               </button>
             </div>
           </div>
-          <div class="contents contents2">
+          <div id="tab-panel2" class="contents tabpanel" role="tabpane2" aria-labelledby="tab2">
             <span>스포츠</span>
           </div>
-          <div class="contents contents3">
+          <div id="tab-panel3" class="contents tabpanel" role="tabpane3" aria-labelledby="tab3">
             <span>자동차</span>
           </div>
-          <div class="contents contents4">
+          <div id="tab-panel4" class="contents tabpanel" role="tabpane4" aria-labelledby="tab4">
             <span>웹툰</span>
           </div>
-          <div class="contents contents5">
+          <div id="tab-panel5" class="contents tabpanel" role="tabpane5" aria-labelledby="tab5">
             <span>경제</span>
           </div>
-          <div class="contents contents6">
+          <div id="tab-panel6" class="contents tabpanel" role="tabpane6" aria-labelledby="tab6">
             <span>추천구독</span>
           </div>
-          <div class="contents contents7">
+          <div id="tab-panel7" class="contents tabpanel" role="tabpane7" aria-labelledby="tab7">
             <span>레시피</span>
           </div>
-          <div class="contents contents8">
+          <div id="tab-panel8" class="contents tabpanel" role="tabpane8" aria-labelledby="tab8">
             <span>리빙</span>
           </div>
-          <div class="contents contents9">
+          <div id="tab-panel9" class="contents tabpanel" role="tabpane9" aria-labelledby="tab9">
             <span>책방</span>
           </div>
-          <div class="contents contents10">
+          <div id="tab-panel10" class="contents tabpanel" role="tabpane10" aria-labelledby="tab10">
             <span>패션뷰티</span>
           </div>
         </div>
@@ -1508,8 +1509,8 @@
           <div class="goods_group">
             <div class="shop_control">
               <div class="num_box">
-                <em class="current">1</em>
-                <span class="total">/ 18</span>
+                <em class="current">1</em>/
+                <span class="total">18</span>
               </div>
               <div class="button_box">
                 <a href="/" class="button prev">

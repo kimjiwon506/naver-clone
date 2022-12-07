@@ -1119,19 +1119,47 @@ header {
   position: relative;
 }
 
-.thema_category .category_box_wrap {
+.category_box_wrap {
   overflow: hidden;
-  width: 750px;
-  border: 1px solid #e4e8eb;
   box-sizing: border-box;
 }
 
-.category_box_wrap .thema_slider_nav {
-  width: 937.5px;
+.category_box_wrap::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: "";
+  border: 1px solid #dae1e6;
 }
 
-.category_box_wrap .thema_slider_nav .item {
-  border-right: 1px solid #e4e8eb;
+.category_box_wrap .tab_list {
+  font-size: 0;
+  line-height: 0;
+  white-space: nowrap;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.category_box_wrap .tab_list .tab {
+  display: inline-block;
+  width: 93.75px;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 49px;
+  font-weight: bold;
+  z-index: 1;
+  position: relative;
+}
+
+.tab_list .tab a {
+  display: block;
+  font-size: 13px;
+  line-height: 49px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  border-right: 1px solid #dae1e6;
 }
 
 .thema_category .arrow_button {
@@ -1145,7 +1173,7 @@ header {
   background-size: 442px 428px;
 }
 
-.thema_category .arrow_button.left_button {
+.thema_category .arrow_button.prev_button {
   background-position: -128px -342px;
   position: absolute;
   left: -23px;
@@ -1154,7 +1182,7 @@ header {
   z-index: 1;
 }
 
-.thema_category .arrow_button.right_button {
+.thema_category .arrow_button.next_button {
   background-position: -86px -342px;
   position: absolute;
   right: -23px;
@@ -1163,39 +1191,14 @@ header {
   z-index: 1;
 }
 
-.category_box {
-  font-size: 0;
-  line-height: 0;
-  /* border: 1px solid #dae1e6; */
-}
-
-.category_box::after {
+.tab_list::after {
   content: "";
   display: table;
   table-layout: fixed;
   clear: both;
 }
 
-.category_box .item {
-  float: left;
-  width: 93.75px;
-  box-sizing: border-box;
-  height: 49px;
-  text-align: center;
-  line-height: 49px;
-  font-weight: bold;
-}
-
-.category_box .item a {
-  display: block;
-  font-size: 13px;
-  line-height: 49px;
-  font-weight: 700;
-  text-align: center;
-  text-decoration: none;
-}
-
-.category_box .item .ico_middot {
+.tab_list .tab .ico_middot {
   width: 2px;
   height: 2px;
   display: inline-block;
@@ -1205,53 +1208,61 @@ header {
   vertical-align: 4px;
 }
 
+.thema_slider_contents_wrap .contents {
+  display: none;
+}
+
+.thema_slider_contents_wrap .contents.active {
+  display: block;
+}
+
 /* 카테고리 아이템 의 a 에 active 되었을 경우 색상 바뀌도록 */
-.category_box .enter a.active {
+.tab_list .enter a.active {
   background-color: #e65da0;
   color: #fff;
   box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%);
 }
-.category_box .sports a.active {
+.tab_list .sports a.active {
   background-color: #0147b5;
   color: #fff;
   box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%);
 }
-.category_box .car a.active {
+.tab_list .car a.active {
   background-color: #4a94e1;
   color: #fff;
   box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%);
 }
-.category_box .webtoon a.active {
+.tab_list .webtoon a.active {
   background-color: #66c971;
   color: #fff;
   box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%);
 }
-.category_box .economic a.active {
+.tab_list .economic a.active {
   background-color: #35ae5e;
   color: #fff;
   box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%);
 }
-.category_box .recommend a.active {
+.tab_list .recommend a.active {
   background-color: #5290ff;
   color: #fff;
   box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%);
 }
-.category_box .recipe a.active {
+.tab_list .recipe a.active {
   background-color: #ebaa00;
   color: #fff;
   box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%);
 }
-.category_box .living a.active {
+.tab_list .living a.active {
   background-color: #c08d31;
   color: #fff;
   box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%);
 }
-.category_box .book a.active {
+.tab_list .book a.active {
   background-color: #42be6f;
   color: #fff;
   box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%);
 }
-.category_box .fashion a.active {
+.tab_list .fashion a.active {
   background-color: #8449ca;
   color: #fff;
   box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%);
