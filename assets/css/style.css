@@ -1152,6 +1152,10 @@ header {
   position: relative;
 }
 
+.category_box_wrap .tab_list .tab:nth-last-of-type(1) a {
+  border-right: none;
+}
+
 .tab_list .tab a {
   display: block;
   font-size: 13px;

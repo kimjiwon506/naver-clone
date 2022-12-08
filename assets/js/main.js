@@ -148,15 +148,15 @@ $(document).ready(function () {
     let prevIndex = (currentIndex - 1) % totalItem;
 
     let tabListWidth = $(".tab_list").outerWidth();
-    let indexItemWidth = item.eq(currentIndex).position().left;
+    let activeItemWidth = item.eq(currentIndex).position().left;
     let leftItemWidth = $(".tab_list").outerWidth() - item.outerWidth() * 2;
 
-    if ($(this).hasClass("next_button") && indexItemWidth === leftItemWidth) {
+    if ($(this).hasClass("next_button") && activeItemWidth >= leftItemWidth) {
       $(".tab_list").css({
         transform: "translateX(" + -(totalWidth - tabListWidth) + "px)",
       });
     }
-    if ($(this).hasClass("prev_button") && indexItemWidth === 0) {
+    if ($(this).hasClass("prev_button") && activeItemWidth === 0) {
       $(".tab_list").css({
         transform: "translateX(0px)",
       });
