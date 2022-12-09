@@ -104,6 +104,126 @@ header {
   z-index: 2000;
 }
 
+header.fixed {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  -webkit-animation: ani_dropdown 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  animation: ani_dropdown 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+@keyframes ani_dropdown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+header.fixed .gnb {
+  display: none;
+}
+
+header.fixed .service_area {
+  display: none;
+}
+
+header.fixed .header_top {
+  height: 64px;
+  border-color: #10ce72;
+  z-index: 1;
+}
+
+header.fixed .header_top:hover {
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+header.fixed .header_top .logo_area h1 {
+  left: -17px;
+  z-index: 1;
+}
+
+header.fixed .header_top .logo_area h1 a:before {
+  display: inline-block;
+  content: "";
+  width: 22px;
+  height: 22px;
+  background-position: -420px 0;
+  background-repeat: no-repeat;
+  vertical-align: top;
+  background-image: url(../img/header/header-image.png);
+  background-size: 442px 428px;
+  margin: 21px 19px 20px 19px;
+}
+
+header.fixed .search_area {
+  transform: translate(-255px, -4px);
+}
+
+header.fixed .search_area::before {
+  position: absolute;
+  top: 22px;
+  bottom: 23px;
+  left: 59px;
+  content: "";
+  width: 1px;
+  background-color: #e8ecee;
+}
+
+header.fixed .search_area form {
+  width: 721px;
+  height: 60px;
+  padding-left: 59px;
+  margin-top: 3px;
+  border: 1px solid transparent !important;
+}
+
+header.fixed .search_area .window_box {
+  border: none;
+}
+
+header.fixed .search_area .window_box input {
+  width: 584px;
+  font-size: 21px;
+  letter-spacing: -0.4px;
+  transform: translateY(2px);
+}
+
+header.fixed .search_area .window_box input::placeholder {
+  color: #e4e4e4;
+  font-weight: 400;
+}
+
+header.fixed .search_area .window_box input:-ms-input-placeholder {
+  color: #e4e4e4;
+  font-weight: 400;
+}
+
+header.fixed .search_area .keyboard_button {
+  transform: translateX(11px);
+}
+
+header.fixed .search_area .auto_complete_button {
+  transform: translateX(13px);
+}
+
+header.fixed .search_area .search_button {
+  background-color: transparent !important;
+}
+
+header.fixed .search_area .search_icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-position: -327px -342px;
+  background-repeat: no-repeat;
+  vertical-align: top;
+  -webkit-transform: translateX(-3px);
+  transform: translateX(-3px);
+}
+
 .header_top {
   position: relative;
   height: 160px;
@@ -146,6 +266,14 @@ header {
   background-image: url(../img/header/header-image.png);
   background-size: 442px 428px;
   background-repeat: no-repeat;
+}
+
+.search_area .window_box input::placeholder {
+  color: transparent;
+}
+
+.search_area .window_box input:-ms-input-placeholder {
+  color: transparent;
 }
 
 /* - service_area */
@@ -494,10 +622,6 @@ header {
   right: 30px;
 }
 
-/* .weather_mask:hover .weather_group {
-  animation-play-state: paused;
-} */
-
 .weather_group {
   overflow: hidden;
   position: absolute;
@@ -604,6 +728,7 @@ header {
 
 /* container */
 .container {
+  position: relative;
   width: 1130px;
   margin: 0 auto;
   padding: 20px 0;
@@ -910,7 +1035,7 @@ header {
 .news_stand_container .arrow_button.left_button {
   background-position: -224px -158px;
   position: absolute;
-  left: -27px;
+  left: -28px;
   top: 109px;
   display: inline-block;
   z-index: 1;
@@ -924,7 +1049,7 @@ header {
 .news_stand_container .arrow_button.right_button {
   background-position: -92px -296px;
   position: absolute;
-  right: -27px;
+  right: -14px;
   top: 109px;
   display: inline-block;
   z-index: 1;
@@ -1189,7 +1314,7 @@ header {
 .thema_category .arrow_button.next_button {
   background-position: -86px -342px;
   position: absolute;
-  right: -23px;
+  right: -18px;
   top: 5px;
   display: inline-block;
   z-index: 1;
@@ -1425,6 +1550,33 @@ header {
 /* //column_left */
 
 /* colum_right */
+
+/* fixed */
+.column_right.bottom_fixed {
+  float: right;
+}
+
+.column_right.bottom_fixed .column_right_inner {
+  position: fixed;
+  top: auto;
+  bottom: 36px;
+  transition: bottom 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.column_right.is_stop .column_right_inner {
+  position: absolute;
+  top: auto;
+  bottom: 27px;
+}
+
+.column_right.top_fixed .column_right_inner {
+  position: fixed;
+  top: 70px;
+  bottom: auto;
+  margin-top: 20px;
+}
+/* //fixed */
+
 .column_right {
   float: right;
   width: 350px;
@@ -1602,6 +1754,16 @@ header {
   padding: 14px 0 13px 16px;
 }
 
+.square_rolling .issue_text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  font-size: 13px;
+  line-height: 20px;
+  color: #404040;
+}
+
 .corona_issue .issue_badge {
   float: left;
   height: 18px;
@@ -1633,7 +1795,7 @@ header {
 }
 
 .trand_shop {
-  margin-top: 18px;
+  margin-top: 15px;
 }
 
 .trand_shop .shop_header {
@@ -1651,17 +1813,17 @@ header {
 .shop_header .link_shop {
   float: left;
   margin: 2px 0 0 1px;
-  font-size: 13px;
   color: #000;
+  font-size: 13px;
+  line-height: 17px;
 }
 
 .shop_header .link_shop a,
 .shop_header .link_shop:before {
   float: left;
-  line-height: 16px;
 }
 
-.shop_header .link_shop:before {
+.shop_header .link_shop a:before {
   display: inline-block;
   width: 15px;
   height: 15px;
@@ -1744,6 +1906,7 @@ header {
 .mall_area .link_mall {
   float: left;
   line-height: 23px;
+  letter-spacing: -0.25px;
 }
 
 .mall_area .mid_comma {
@@ -1803,53 +1966,8 @@ header {
   margin-left: -3px;
 }
 
-.button_box {
-  overflow: hidden;
-  float: left;
-  margin-left: 7px;
-}
-
-.button_box .button {
-  float: left;
-  background-color: #fff;
-  border: 1px solid #dae1e6;
-}
-
-.button_box::after {
-  content: "";
-  display: table;
-  table-layout: fixed;
-  clear: both;
-}
-
-.button_box .button + .button {
-  margin-left: -1px;
-}
-
-.button_box .prev::before {
-  display: inline-block;
-  width: 5px;
-  height: 9px;
-  background-position: -116px -60px;
-  background-repeat: no-repeat;
-  vertical-align: top;
-  content: "";
-  margin: 9px 12px 9px 10px;
-  background-image: url(../img/container/colum-right-image.png);
-  background-size: 129px 101px;
-}
-
-.button_box .next::before {
-  display: inline-block;
-  width: 5px;
-  height: 9px;
-  background-position: -109px -60px;
-  background-repeat: no-repeat;
-  vertical-align: top;
-  content: "";
-  margin: 9px 10px 9px 12px;
-  background-image: url(../img/container/colum-right-image.png);
-  background-size: 129px 101px;
+.shop_page_control.button_box.top {
+  margin-top: 0;
 }
 
 /* trand_shop_card_item */

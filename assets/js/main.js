@@ -6,6 +6,60 @@ $(document).ready(function () {
     $(".top_banner").hide();
   });
 
+  var lastScroll = 0;
+  // 스크롤
+  $(document).scroll(function () {
+    let windowY = window.scrollY || window.pageYOffset;
+    let headerHeight = $("header").outerHeight();
+
+    let columnRight = $(".column_right");
+    let columnLeft = $(".column_left");
+
+    // outerHeight => 선택한 요소의 세로 값(패딩/보더 포함)
+    let columnLeftHeight = columnLeft.outerHeight();
+    let columnRightHeight = columnRight.outerHeight();
+
+    let columnLeftBottom = columnLeft.offset().top + columnLeftHeight;
+    let columnRightBottom = columnRight.offset().top + columnRightHeight;
+    let scrollBottom = windowY + $(window).height();
+
+    let scrollTop = $(this).scrollTop();
+
+    // 헤더 스크롤
+    function headerScroll() {
+      if (windowY > headerHeight) {
+        $("header").addClass("fixed");
+      } else if (windowY < headerHeight) {
+        $("header").removeClass("fixed");
+      }
+    }
+
+    function contentsScroll() {
+      if (scrollTop > lastScroll) {
+        if (scrollBottom >= columnRightBottom) {
+          columnRight.addClass("bottom_fixed");
+        }
+        if (columnLeftBottom <= scrollBottom + 10) {
+          columnRight.addClass("is_stop");
+        }
+      } else {
+        $(".column_right_inner").position().top >= scrollTop &&
+          columnRight.addClass("top_fixed");
+
+        if (windowY < 64) {
+          columnRight.removeClass("bottom_fixed");
+          columnRight.removeClass("is_stop");
+          columnRight.removeClass("top_fixed");
+        }
+      }
+      console.log(window.pageYOffset);
+    }
+
+    contentsScroll();
+    headerScroll();
+    lastScroll = scrollTop;
+  });
+
   // gnb메뉴 오른쪽 날씨 롤링 배너
   $(".weather_group").not(".active").hide();
 
@@ -13,16 +67,15 @@ $(document).ready(function () {
 
   function nextSlide() {
     $(".weather_group").hide();
-    let allSlide = $(".weather_group");
+    const allSlide = $(".weather_group");
     let currentIndex = 0;
+    let newIndex = 0;
 
     $(".weather_group").each(function (index) {
       if ($(this).hasClass("active")) {
         currentIndex = index;
       }
     });
-
-    let newIndex = 0;
 
     if (currentIndex >= allSlide.length - 1) {
       newIndex = 0;
@@ -35,7 +88,7 @@ $(document).ready(function () {
     $(".weather_group").eq(newIndex).show();
   }
 
-  // // 뉴스스탠드 슬라이더
+  // 뉴스스탠드 슬라이더
   const newsStandSlider = $(".news_stand_slider_wrap").slick({
     fade: true,
     autoplay: true,
@@ -58,8 +111,7 @@ $(document).ready(function () {
     } else if (currentSlide === slick.$slides.length - 1) {
       $(".news_stand.right_button").hide();
     } else {
-      $(".news_stand.left_button").show();
-      $(".news_stand.right_button").show();
+      $(".news_stand.left_button , .news_stand.right_button").show();
     }
   });
 
@@ -67,11 +119,9 @@ $(document).ready(function () {
   const item = $(".tab_list li");
   const arrowButton = $(".thema_category.arrow_button");
   const totalItem = item.length;
-  const totalWidth = totalItem * item.outerWidth();
 
   let currentIndex = 0;
 
-  // 탭 클릭시 컨텐츠와 함께 보여짐
   $(".tab:first-of-type, .tabpanel:first-of-type")
     .addClass("active")
     .attr("tabindex", "0");
@@ -94,7 +144,6 @@ $(document).ready(function () {
       .find("a")
       .removeClass("active");
 
-    // 연관된 탭 패널 활성화
     $("#" + $(this).attr("aria-controls"))
       .attr("tabindex", "0")
       .addClass("active")
@@ -113,12 +162,10 @@ $(document).ready(function () {
     } else if (currentIndex + 1 === totalItem) {
       $(".thema_category.next_button").hide();
     } else {
-      $(".thema_category.next_button").show();
-      $(".thema_category.prev_button").show();
+      $(".thema_category.next_button, .thema_category.prev_button").show();
     }
   }
 
-  // 화살표 버튼 클릭시 이동
   function moveTab(index) {
     currentIndex = index;
     item.find("a").removeClass("active").eq(currentIndex).addClass("active");
@@ -147,16 +194,20 @@ $(document).ready(function () {
     let nextIndex = (currentIndex + 1) % totalItem;
     let prevIndex = (currentIndex - 1) % totalItem;
 
+    let totalItemWidth = totalItem * item.outerWidth();
     let tabListWidth = $(".tab_list").outerWidth();
-    let activeItemWidth = item.eq(currentIndex).position().left;
-    let leftItemWidth = $(".tab_list").outerWidth() - item.outerWidth() * 2;
+    let activeItemPositionLeft = item.eq(currentIndex).position().left;
+    let tabListLeftPosition = tabListWidth - item.outerWidth();
 
-    if ($(this).hasClass("next_button") && activeItemWidth >= leftItemWidth) {
+    if (
+      $(this).hasClass("next_button") &&
+      activeItemPositionLeft === tabListLeftPosition
+    ) {
       $(".tab_list").css({
-        transform: "translateX(" + -(totalWidth - tabListWidth) + "px)",
+        transform: "translateX(" + -(totalItemWidth - tabListWidth) + "px)",
       });
     }
-    if ($(this).hasClass("prev_button") && activeItemWidth === 0) {
+    if ($(this).hasClass("prev_button") && activeItemPositionLeft === 0) {
       $(".tab_list").css({
         transform: "translateX(0px)",
       });
@@ -170,4 +221,32 @@ $(document).ready(function () {
   });
 
   // 트렌드쇼핑
+  let slider = $(".goods_list_wrap");
+  let sliderLength = slider.children().length;
+
+  slider.each(function () {
+    $(this).slick({
+      fade: true,
+      speed: 100,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      dots: false,
+      Infinity: true,
+      arrow: true,
+      prevArrow: $(".shop_page_control .prev"),
+      nextArrow: $(".shop_page_control .next"),
+    });
+
+    $(this)
+      .siblings(".shop_control, .shop_page_control")
+      .find(".num_box .total")
+      .html(sliderLength);
+
+    $(this).on("afterChange", function (_event, _slick, currentSlide) {
+      $(this)
+        .siblings(".shop_control, .shop_page_control")
+        .find(".num_box .current")
+        .html(currentSlide + 1);
+    });
+  });
 });

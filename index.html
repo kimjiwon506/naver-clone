@@ -14,8 +14,6 @@
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 
-<!--  -->
-
 <!-- script -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
@@ -59,7 +57,7 @@
             <fieldset>
               <legend class="blind">검색</legend>
               <div class="window_box">
-                <input type="text" title="검색어 입력">
+                <input type="text" title="검색어 입력" placeholder="검색어를 입력해 주세요.">
               </div>
             </fieldset>
 
@@ -1427,7 +1425,7 @@
             <div class="square_rolling">
               <a href="/" class="corona_issue">
                 <span class="issue_badge">이슈</span>
-                <span>코로나바이러스감염증-19 현황</span>
+                <span class="issue_text">코로나바이러스감염증-19 현황</span>
               </a>
             </div>
           </div>
@@ -1443,9 +1441,7 @@
           <h2 class="blind">쇼핑캐스트</h2>
           <div class="shop_header">
             <h1 class="link_shop">
-              <a href="/">
-                트렌드쇼핑
-              </a>
+              <a href="/">트렌드쇼핑</a>
             </h1>
 
             <ul class="tab_title">
@@ -1511,10 +1507,9 @@
           <div class="goods_group">
             <div class="shop_control">
               <div class="num_box">
-                <em class="current">1</em>/
-                <span class="total">18</span>
+                <em class="current">1</em>/ <span class="total"></span>
               </div>
-              <div class="button_box">
+              <div class="shop_page_control button_box top">
                 <a href="/" class="button prev">
                   <span class="blind">이전</span>
                 </a>
@@ -1686,13 +1681,174 @@
                   </a>
                 </li>
               </ul>
+              <ul class="goods_list">
+                <li class="goods_card_item">
+                  <a href="/" class="list_item">
+                    <div class="thumb_box">
+                      <img src="./assets/img/container/trand-shop-goods-list/goods-list-image-12.jpg" width="107"
+                        height="146" alt="">
+                      <span class="thumb_background"></span>
+                    </div>
+                    <p class="desc_box">
+                      <span class="title strong">1년에 딱! 한번만</span>
+                      <span class="title">최대80% BIG SALE</span>
+                    </p>
+                  </a>
+                </li>
+                <li class="goods_card_item">
+                  <a href="/" class="list_item">
+                    <div class="thumb_box">
+                      <img src="./assets/img/container/trand-shop-goods-list/goods-list-image-11.jpg" width="107"
+                        height="146" alt="">
+                      <span class="thumb_background"></span>
+                    </div>
+                    <p class="desc_box">
+                      <span class="title strong">처음 느껴봐요!</span>
+                      <span class="title">극강의 푹신함~</span>
+                    </p>
+                  </a>
+                </li>
+                <li class="goods_card_item">
+                  <a href="/" class="list_item">
+                    <div class="thumb_box">
+                      <img src="./assets/img/container/trand-shop-goods-list/goods-list-image-10.jpg" width="107"
+                        height="146" alt="">
+                      <span class="thumb_background"></span>
+                    </div>
+                    <p class="desc_box">
+                      <span class="title strong">이게 뭐길래?</span>
+                      <span class="title">만든사람천재야?</span>
+                    </p>
+                  </a>
+                </li>
+
+                <li class="goods_card_item">
+                  <a href="/" class="list_item">
+                    <div class="thumb_box">
+                      <img src="./assets/img/container/trand-shop-goods-list/goods-list-image-9.jpg" width="107"
+                        height="146" alt="">
+                      <span class="thumb_background"></span>
+                    </div>
+                    <p class="desc_box">
+                      <span class="title strong">1년에 딱! 한번만</span>
+                      <span class="title">최대80% BIG SALE</span>
+                    </p>
+                  </a>
+                </li>
+                <li class="goods_card_item">
+                  <a href="/" class="list_item">
+                    <div class="thumb_box">
+                      <img src="./assets/img/container/trand-shop-goods-list/goods-list-image-8.jpg" width="107"
+                        height="146" alt="">
+                      <span class="thumb_background"></span>
+                    </div>
+                    <p class="desc_box">
+                      <span class="title strong">처음 느껴봐요!</span>
+                      <span class="title">극강의 푹신함~</span>
+                    </p>
+                  </a>
+                </li>
+                <li class="goods_card_item">
+                  <a href="/" class="list_item">
+                    <div class="thumb_box">
+                      <img src="./assets/img/container/trand-shop-goods-list/goods-list-image-7.jpg" width="107"
+                        height="146" alt="">
+                      <span class="thumb_background"></span>
+                    </div>
+                    <p class="desc_box">
+                      <span class="title strong">이게 뭐길래?</span>
+                      <span class="title">만든사람천재야?</span>
+                    </p>
+                  </a>
+                </li>
+
+                <li class="goods_card_item">
+                  <a href="/" class="list_item">
+                    <div class="thumb_box">
+                      <img src="./assets/img/container/trand-shop-goods-list/goods-list-image-6.jpg" width="107"
+                        height="146" alt="">
+                      <span class="thumb_background"></span>
+                    </div>
+                    <p class="desc_box">
+                      <span class="title strong">1년에 딱! 한번만</span>
+                      <span class="title">최대80% BIG SALE</span>
+                    </p>
+                  </a>
+                </li>
+                <li class="goods_card_item">
+                  <a href="/" class="list_item">
+                    <div class="thumb_box">
+                      <img src="./assets/img/container/trand-shop-goods-list/goods-list-image-5.jpg" width="107"
+                        height="146" alt="">
+                      <span class="thumb_background"></span>
+                    </div>
+                    <p class="desc_box">
+                      <span class="title strong">처음 느껴봐요!</span>
+                      <span class="title">극강의 푹신함~</span>
+                    </p>
+                  </a>
+                </li>
+                <li class="goods_card_item">
+                  <a href="/" class="list_item">
+                    <div class="thumb_box">
+                      <img src="./assets/img/container/trand-shop-goods-list/goods-list-image-4.jpg" width="107"
+                        height="146" alt="">
+                      <span class="thumb_background"></span>
+                    </div>
+                    <p class="desc_box">
+                      <span class="title strong">이게 뭐길래?</span>
+                      <span class="title">만든사람천재야?</span>
+                    </p>
+                  </a>
+                </li>
+
+                <li class="goods_card_item">
+                  <a href="/" class="list_item">
+                    <div class="thumb_box">
+                      <img src="./assets/img/container/trand-shop-goods-list/goods-list-image-3.jpg" width="107"
+                        height="146" alt="">
+                      <span class="thumb_background"></span>
+                    </div>
+                    <p class="desc_box">
+                      <span class="title strong">1년에 딱! 한번만</span>
+                      <span class="title">최대80% BIG SALE</span>
+                    </p>
+                  </a>
+                </li>
+                <li class="goods_card_item">
+                  <a href="/" class="list_item">
+                    <div class="thumb_box">
+                      <img src="./assets/img/container/trand-shop-goods-list/goods-list-image-2.jpg" width="107"
+                        height="146" alt="">
+                      <span class="thumb_background"></span>
+                    </div>
+                    <p class="desc_box">
+                      <span class="title strong">처음 느껴봐요!</span>
+                      <span class="title">극강의 푹신함~</span>
+                    </p>
+                  </a>
+                </li>
+                <li class="goods_card_item">
+                  <a href="/" class="list_item">
+                    <div class="thumb_box">
+                      <img src="./assets/img/container/trand-shop-goods-list/goods-list-image-1.jpg" width="107"
+                        height="146" alt="">
+                      <span class="thumb_background"></span>
+                    </div>
+                    <p class="desc_box">
+                      <span class="title strong">이게 뭐길래?</span>
+                      <span class="title">만든사람천재야?</span>
+                    </p>
+                  </a>
+                </li>
+              </ul>
             </div>
 
             <div class="shop_page_control">
               <a href="/" class="button prev"><span class="blind">이전</span></a>
               <div class="num_box">
-                <em class="current strong">1</em>
-                <span>/ 18</span>
+                <em class="current strong">1</em>/
+                <span class="total"></span>
               </div>
               <a href="/" class="button next"><span class="blind">이후</span></a>
             </div>

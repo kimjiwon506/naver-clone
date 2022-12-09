@@ -158,3 +158,53 @@
   z-index: 1;
 }
 /* //card-item */
+
+/* 버튼박스 */
+.button_box {
+  overflow: hidden;
+  float: left;
+  margin-left: 7px;
+}
+
+.button_box .button {
+  float: left;
+  background-color: #fff;
+  border: 1px solid #dae1e6;
+}
+
+.button_box::after {
+  content: "";
+  display: table;
+  table-layout: fixed;
+  clear: both;
+}
+
+.button_box .button + .button {
+  margin-left: -1px;
+}
+
+.button_box .prev::before {
+  display: inline-block;
+  width: 5px;
+  height: 9px;
+  background-position: -116px -60px;
+  background-repeat: no-repeat;
+  vertical-align: top;
+  content: "";
+  margin: 9px 12px 9px 10px;
+  background-image: url(../img/container/colum-right-image.png);
+  background-size: 129px 101px;
+}
+
+.button_box .next::before {
+  display: inline-block;
+  width: 5px;
+  height: 9px;
+  background-position: -109px -60px;
+  background-repeat: no-repeat;
+  vertical-align: top;
+  content: "";
+  margin: 9px 10px 9px 12px;
+  background-image: url(../img/container/colum-right-image.png);
+  background-size: 129px 101px;
+}
