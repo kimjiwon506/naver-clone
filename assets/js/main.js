@@ -35,29 +35,32 @@ $(document).ready(function () {
     }
 
     function contentsScroll() {
-      if (scrollTop > lastScroll) {
-        if (scrollBottom >= columnRightBottom) {
-          columnRight.addClass("bottom_fixed");
-        }
-        if (columnLeftBottom <= scrollBottom + 10) {
-          columnRight.addClass("is_stop");
-        }
-      } else {
-        $(".column_right_inner").position().top >= scrollTop &&
-          columnRight.addClass("top_fixed");
-
-        if (windowY < 64) {
-          columnRight.removeClass("bottom_fixed");
-          columnRight.removeClass("is_stop");
-          columnRight.removeClass("top_fixed");
-        }
-      }
-      console.log(window.pageYOffset);
+      // if (scrollTop > lastScroll) {
+      //   if (scrollBottom >= columnRightBottom) {
+      //     columnRight.addClass("bottom_fixed");
+      //   }
+      //   if (columnLeftBottom <= scrollBottom + 10) {
+      //     columnRight.addClass("is_stop");
+      //   }
+      // } else {
+      //   $(".column_right_inner").position().top >= scrollTop &&
+      //     columnRight.addClass("top_fixed");
+      //   if (windowY < 64) {
+      //     columnRight.removeClass("bottom_fixed");
+      //     columnRight.removeClass("is_stop");
+      //     columnRight.removeClass("top_fixed");
+      //   }
+      // }
     }
 
     contentsScroll();
     headerScroll();
     lastScroll = scrollTop;
+
+    console.log(
+      window.pageYOffset + 64,
+      columnRight[0].getBoundingClientRect().bottom - 64
+    );
   });
 
   // gnb메뉴 오른쪽 날씨 롤링 배너
