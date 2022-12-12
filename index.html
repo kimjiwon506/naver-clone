@@ -15,10 +15,20 @@
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 
+<!-- flicking slider -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/egjs-flicking/4.9.0/flicking.pkgd.min.js"
+  crossorigin="anonymous"></script>
+<script src="https://naver.github.io/egjs-flicking-plugins/release/latest/dist/plugins.js"
+  crossorigin="anonymous"></script>
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/egjs-flicking/4.9.0/flicking.css"
+  crossorigin="anonymous" /> -->
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css"> -->
+
 <!-- script -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="/assets/js/main.js"></script>
+<script type="module" src="./assets/js/flick.js"></script>
 </head>
 
 <body>
@@ -151,7 +161,14 @@
         </div>
 
         <div class="weather_mask">
-          <div class="weather_group active">
+          <div id="flick1" class="flicking-viewport vertical">
+            <div class="flicking-camera">
+              <div class="weather-panel">test1</div>
+              <div class="weather-panel">test2</div>
+              <div class="weather-panel">test3</div>
+            </div>
+          </div>
+          <!-- <div class="weather_group active">
             <div class="air_conditional_box">
               <a href="">
                 <ul>
@@ -191,8 +208,9 @@
                 <span class="location">구로동</span>
               </a>
             </div>
-          </div>
+          </div> -->
         </div>
+
       </div>
     </div>
   </header>
