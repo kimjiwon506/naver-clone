@@ -14,15 +14,6 @@
   text-overflow: ellipsis;
 }
 
-.background_border {
-  background-color: #f7f9fa;
-  border: 1px solid #dae1e6;
-}
-
-.bold {
-  font-weight: bold;
-}
-
 .strong {
   font-weight: 700;
 }
