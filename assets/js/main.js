@@ -25,11 +25,9 @@ $(document).ready(function () {
     let scrollTop = windowY;
 
     function headerScroll() {
-      if (windowY > headerHeight) {
-        $("header").addClass("fixed");
-      } else if (windowY < headerHeight) {
-        $("header").removeClass("fixed");
-      }
+      windowY > headerHeight
+        ? $("header").addClass("fixed")
+        : $("header").removeClass("fixed");
     }
 
     function contentsScroll() {
@@ -217,4 +215,12 @@ $(document).ready(function () {
         .html(currentSlide + 1);
     });
   });
+
+  const ficking1 = new Flicking("#flick1", {
+    circular: true,
+    horizontal: false,
+    stopOnHover: true,
+  });
+
+  ficking1.addPlugins(new Flicking.Plugins.AutoPlay({ stopOnHover: true }));
 });
