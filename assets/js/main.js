@@ -159,8 +159,8 @@ $(document).ready(function () {
 
   arrowButton.on("click", function (e) {
     e.preventDefault();
-    let nextIndex = (currentIndex + 1) % totalItem;
-    let prevIndex = (currentIndex - 1) % totalItem;
+    let nextIndex = currentIndex + 1;
+    let prevIndex = currentIndex - 1;
 
     let totalItemWidth = totalItem * item.outerWidth();
     let tabListWidth = $(".tab_list").outerWidth();

@@ -64,7 +64,6 @@
   height: 13px;
   background-position: -89px -63px;
   content: "";
-  /* vertical-align top 사용하기 */
   vertical-align: top;
   background-image: url(../img/banner/banner.png);
   background-repeat: no-repeat;
@@ -109,7 +108,6 @@ header.fixed {
   top: 0;
   right: 0;
   left: 0;
-  -webkit-animation: ani_dropdown 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
   animation: ani_dropdown 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
@@ -2400,6 +2398,7 @@ footer .banner_list .banner_item + .banner_item {
 
 .notice_area h3 {
   float: left;
+  font-size: 12px;
 }
 
 .notice_area .all_service {
@@ -2423,6 +2422,13 @@ footer .banner_list .banner_item + .banner_item {
 .aside_area {
   overflow: hidden;
   border-bottom: 1px solid #e4e8eb;
+}
+
+.aside_area::after {
+  content: "";
+  display: table;
+  table-layout: fixed;
+  clear: both;
 }
 
 .partner_wrap {
@@ -2487,6 +2493,7 @@ footer .banner_list .banner_item + .banner_item {
 
 .service_info {
   overflow: hidden;
+  display: inline-block;
 }
 
 .service_info strong {
@@ -2512,6 +2519,13 @@ footer .banner_list .banner_item + .banner_item {
   padding-top: 25px;
 }
 
+.corp_area::after {
+  content: "";
+  display: table;
+  table-layout: fixed;
+  clear: both;
+}
+
 .corp_area ul {
   overflow: hidden;
   float: left;
@@ -2520,6 +2534,9 @@ footer .banner_list .banner_item + .banner_item {
 
 .corp_area li {
   float: left;
+}
+
+.corp_area li a {
   color: #777;
 }
 
