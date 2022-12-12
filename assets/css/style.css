@@ -607,69 +607,46 @@ header.fixed .search_area .search_icon {
   background-size: 442px 428px;
 }
 
-/* weadhter_grup */
-.weather_mask {
-  overflow: hidden;
-  width: 270px;
-  height: 49px;
-  float: right;
+.weather_area {
   position: absolute;
   top: 0;
   right: 30px;
-}
-
-.weather_group {
-  overflow: hidden;
-  position: absolute;
   bottom: 0;
-  right: 0px;
+  text-align: right;
 }
 
-.weather_group.active {
-  animation: cycle 6s ease-in infinite;
-}
-
-.air_conditional_box {
-  display: block;
-  max-width: 100%;
-  padding: 17px 0 16px;
+.weather_mask {
+  overflow: hidden;
+  width: 270px;
+  height: 51px;
+  float: right;
+  position: absolute;
 }
 
 .air_conditional_box a {
-  display: block;
-}
-
-@keyframes cycle {
-  0% {
-    bottom: -49px;
-  }
-  3% {
-    bottom: 0;
-  }
-  97% {
-    bottom: 0;
-  }
-  100% {
-    bottom: 49px;
-  }
+  display: inline-block;
+  padding: 17px 0 16px;
+  line-height: 18px;
+  white-space: nowrap;
+  vertical-align: top;
 }
 
 .air_conditional_box ul {
-  margin-right: 9px;
+  font-size: 0;
+  line-height: 0;
+  float: left;
 }
 
-.air_conditional_box ul,
-.item,
+.air_conditional_box ul .item,
 .divider {
   display: inline-block;
   float: left;
-  font-size: 0;
 }
 
 .air_conditional_box .item .item_title {
   color: #505050;
   font-size: 12px;
-  line-height: 16px;
+  line-height: 18px;
 }
 
 .air_conditional_box .item .item_condition {
@@ -717,7 +694,11 @@ header.fixed .search_area .search_icon {
 }
 
 .air_conditional_box .location {
-  color: gray;
+  display: block;
+  padding-left: 9px;
+  color: grey;
+  text-align: right;
+  float: right;
 }
 /* //header */
 

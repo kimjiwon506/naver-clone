@@ -56,34 +56,6 @@ $(document).ready(function () {
     lastScroll = scrollTop;
   });
 
-  // 날씨 배너 롤링
-  $(".weather_group").not(".active").hide();
-
-  setInterval(weatherSlide, 6000);
-
-  function weatherSlide() {
-    $(".weather_group").hide();
-    const allSlide = $(".weather_group");
-    let currentIndex = 0;
-    let newIndex = 0;
-
-    $(".weather_group").each(function (index) {
-      if ($(this).hasClass("active")) {
-        currentIndex = index;
-      }
-    });
-
-    if (currentIndex >= allSlide.length - 1) {
-      newIndex = 0;
-    } else {
-      newIndex = currentIndex + 1;
-    }
-
-    $(".weather_group").removeClass("active");
-    $(".weather_group").eq(newIndex).addClass("active");
-    $(".weather_group").eq(newIndex).show();
-  }
-
   // 뉴스스탠드 슬라이더
   const newsStandSlider = $(".news_stand_slider_wrap").slick({
     fade: true,
