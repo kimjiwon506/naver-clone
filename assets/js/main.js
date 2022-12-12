@@ -13,6 +13,17 @@ $(document).ready(function () {
     let windowY = window.scrollY || window.pageYOffset;
     let headerHeight = $("header").outerHeight();
 
+    let columnRight = $(".column_right");
+    let columnLeft = $(".column_left");
+
+    let columnLeftHeight = columnLeft.outerHeight();
+    let columnRightHeight = columnRight.outerHeight();
+
+    let columnLeftBottom = columnLeft.offset().top + columnLeftHeight;
+    let columnRightBottom = columnRight.offset().top + columnRightHeight;
+    let scrollBottom = windowY + $(window).height();
+    let scrollTop = windowY;
+
     function headerScroll() {
       if (windowY > headerHeight) {
         $("header").addClass("fixed");
@@ -21,7 +32,27 @@ $(document).ready(function () {
       }
     }
 
+    function contentsScroll() {
+      if (scrollTop > lastScroll) {
+        scrollBottom - 64 >= columnRightBottom &&
+          columnRight.addClass("bottom_fixed");
+
+        scrollBottom - 64 >= columnLeftBottom &&
+          columnRight.removeClass("bottom_fixed") &&
+          columnRight.addClass("is_stop");
+      } else {
+        scrollTop <= $(".column_right_inner").position().top &&
+          columnRight.addClass("top_fixed");
+
+        scrollTop <= 64 &&
+          columnRight.removeClass("bottom_fixed") &&
+          columnRight.removeClass("is_stop") &&
+          columnRight.removeClass("top_fixed");
+      }
+    }
+
     headerScroll();
+    contentsScroll();
     lastScroll = scrollTop;
   });
 

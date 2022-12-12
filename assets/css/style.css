@@ -1556,6 +1556,32 @@ header.fixed .search_area .search_icon {
   background-color: #fff;
 }
 
+/* fixed */
+.column_right.bottom_fixed {
+  float: right;
+}
+
+.column_right.bottom_fixed .column_right_inner {
+  position: fixed;
+  top: auto;
+  bottom: 36px;
+  transition: bottom 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.column_right.is_stop .column_right_inner {
+  position: absolute;
+  top: auto;
+  bottom: 27px;
+}
+
+.column_right.top_fixed .column_right_inner {
+  position: fixed;
+  top: 70px;
+  bottom: auto;
+  margin-top: 20px;
+}
+/* //fixed */
+
 .account_login_group {
   padding: 16px 16px 12px 17px;
   background-color: #f7f9fa;
