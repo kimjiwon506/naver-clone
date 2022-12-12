@@ -7,25 +7,12 @@ $(document).ready(function () {
   });
 
   var lastScroll = 0;
+
   // 스크롤
   $(document).scroll(function () {
     let windowY = window.scrollY || window.pageYOffset;
     let headerHeight = $("header").outerHeight();
 
-    let columnRight = $(".column_right");
-    let columnLeft = $(".column_left");
-
-    // outerHeight => 선택한 요소의 세로 값(패딩/보더 포함)
-    let columnLeftHeight = columnLeft.outerHeight();
-    let columnRightHeight = columnRight.outerHeight();
-
-    let columnLeftBottom = columnLeft.offset().top + columnLeftHeight;
-    let columnRightBottom = columnRight.offset().top + columnRightHeight;
-    let scrollBottom = windowY + $(window).height();
-
-    let scrollTop = $(this).scrollTop();
-
-    // 헤더 스크롤
     function headerScroll() {
       if (windowY > headerHeight) {
         $("header").addClass("fixed");
@@ -34,41 +21,16 @@ $(document).ready(function () {
       }
     }
 
-    function contentsScroll() {
-      // if (scrollTop > lastScroll) {
-      //   if (scrollBottom >= columnRightBottom) {
-      //     columnRight.addClass("bottom_fixed");
-      //   }
-      //   if (columnLeftBottom <= scrollBottom + 10) {
-      //     columnRight.addClass("is_stop");
-      //   }
-      // } else {
-      //   $(".column_right_inner").position().top >= scrollTop &&
-      //     columnRight.addClass("top_fixed");
-      //   if (windowY < 64) {
-      //     columnRight.removeClass("bottom_fixed");
-      //     columnRight.removeClass("is_stop");
-      //     columnRight.removeClass("top_fixed");
-      //   }
-      // }
-    }
-
-    contentsScroll();
     headerScroll();
     lastScroll = scrollTop;
-
-    console.log(
-      window.pageYOffset + 64,
-      columnRight[0].getBoundingClientRect().bottom - 64
-    );
   });
 
-  // gnb메뉴 오른쪽 날씨 롤링 배너
+  // 날씨 배너 롤링
   $(".weather_group").not(".active").hide();
 
-  setInterval(nextSlide, 6000);
+  setInterval(weatherSlide, 6000);
 
-  function nextSlide() {
+  function weatherSlide() {
     $(".weather_group").hide();
     const allSlide = $(".weather_group");
     let currentIndex = 0;
